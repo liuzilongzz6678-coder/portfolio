@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张子寒 — 品牌视觉设计师</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-deep: #08080f;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-glow: rgba(255, 255, 255, 0.12);
+  --text-primary: #f0f0f5;
+  --text-secondary: rgba(240, 240, 245, 0.65);
+  --text-tertiary: rgba(240, 240, 245, 0.35);
+  --accent-cyan: #4dd4f0;
+  --accent-purple: #a78bfa;
+  --accent-rose: #fb7185;
+  --accent-amber: #fbbf24;
+  --accent-green: #34d399;
+  --font-display: 'Outfit', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-body: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   AURORA BACKGROUND
+   ============================================ */
+.aurora-layer {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;
+}
+.aurora-orb {
+  position: absolute; border-radius: 50%; filter: blur(140px);
+  opacity: 0.22; will-change: transform; mix-blend-mode: screen;
+}
+.aurora-orb:nth-child(1) {
+  width: 900px; height: 900px;
+  background: radial-gradient(circle at 30% 40%, rgba(77, 212, 240, 0.7), rgba(30, 100, 180, 0.3), transparent 70%);
+  top: -25%; left: -15%; animation: aurora1 20s ease-in-out infinite;
+}
+.aurora-orb:nth-child(2) {
+  width: 800px; height: 800px;
+  background: radial-gradient(circle at 60% 50%, rgba(167, 139, 250, 0.6), rgba(100, 60, 200, 0.2), transparent 70%);
+  top: 35%; right: -20%; animation: aurora2 24s ease-in-out infinite;
+}
+.aurora-orb:nth-child(3) {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle at 40% 60%, rgba(251, 113, 133, 0.5), rgba(200, 60, 80, 0.2), transparent 70%);
+  bottom: -15%; left: 25%; animation: aurora3 22s ease-in-out infinite;
+}
+@keyframes aurora1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(120px, 60px) scale(1.15); }
+  66% { transform: translate(-40px, -30px) scale(0.9); }
+}
+@keyframes aurora2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-100px, -50px) scale(1.1); }
+  66% { transform: translate(60px, 40px) scale(0.85); }
+}
+@keyframes aurora3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-80px, -80px) scale(1.2); }
+}
+.noise-overlay {
+  position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+.main-container {
+  position: relative; z-index: 2;
+  max-width: 1400px; margin: 0 auto; padding: 0 40px;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed; top: 0; left: 50%; transform: translateX(-50%);
+  z-index: 100; width: 100%; max-width: 1400px; padding: 20px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(8, 8, 15, 0.7);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.3s var(--transition-smooth);
+}
+.nav.scrolled { background: rgba(8, 8, 15, 0.9); box-shadow: 0 1px 0 rgba(255,255,255,0.04); }
+.nav-logo {
+  font-family: var(--font-display); font-size: 20px; font-weight: 700;
+  letter-spacing: -0.02em; color: var(--text-primary);
+}
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 14px; font-weight: 500; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text-primary); }
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+  padding: 160px 0 100px; position: relative; overflow: hidden;
+}
+.hero-content { position: relative; z-index: 3; }
+/* Portrait as full background */
+.hero-bg-portrait {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+}
+.hero-bg-portrait img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  mix-blend-mode: lighten;
+  filter: brightness(0.45) saturate(0.8) contrast(1.1);
+  mask-image: radial-gradient(ellipse 70% 65% at 70% 55%, black 35%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 70% 55%, black 35%, transparent 80%);
+}
+/* Text-legibility gradient veil */
+.hero-bg-veil {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(8,8,15,0.75) 0%,
+    rgba(8,8,15,0.45) 45%,
+    rgba(8,8,15,0.08) 65%,
+    rgba(8,8,15,0.25) 100%
+  );
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px; border-radius: 100px;
+  background: rgba(77, 212, 240, 0.1); border: 1px solid rgba(77, 212, 240, 0.2);
+  font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+  color: var(--accent-cyan); margin-bottom: 32px;
+  animation: badgePulse 3s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(77, 212, 240, 0.2); }
+  50% { box-shadow: 0 0 0 8px rgba(77, 212, 240, 0); }
+}
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 8vw, 96px); font-weight: 700;
+  letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 16px;
+}
+.hero-name .highlight {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple), var(--accent-rose));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-title {
+  font-size: 20px; font-weight: 400; color: var(--text-secondary);
+  letter-spacing: 0.01em; margin-bottom: 32px; max-width: 600px;
+}
+.hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+.hero-meta-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-tertiary); }
+.hero-meta-item .dot { width: 6px; height: 6px; border-radius: 50%; }
+.hero-meta-item .dot.cyan { background: var(--accent-cyan); box-shadow: 0 0 8px var(--accent-cyan); }
+.hero-meta-item .dot.purple { background: var(--accent-purple); box-shadow: 0 0 8px var(--accent-purple); }
+.hero-meta-item .dot.amber { background: var(--accent-amber); box-shadow: 0 0 8px var(--accent-amber); }
+
+.scroll-indicator {
+  position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%);
+  color: var(--text-tertiary); animation: scrollBounce 2s ease-in-out infinite; opacity: 0.6;
+}
+@keyframes scrollBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
+.section { padding: 100px 0; }
+.section-label {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 56px); font-weight: 700;
+  letter-spacing: -0.02em; margin-bottom: 12px;
+}
+.section-desc { font-size: 16px; color: var(--text-secondary); max-width: 500px; margin-bottom: 48px; }
+
+/* ============================================
+   BENTO GRID - STATS
+   ============================================ */
+.bento-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+}
+.bento-card {
+  position: relative; background: var(--bg-card);
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  padding: 36px; overflow: hidden;
+  transition: all 0.4s var(--transition-smooth); cursor: default;
+}
+.bento-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.04), transparent 60%);
+  opacity: 0; transition: opacity 0.4s; pointer-events: none; z-index: 0;
+}
+.bento-card:hover::before { opacity: 1; }
+.bento-card:hover { border-color: var(--border-glow); background: var(--bg-card-hover); transform: translateY(-2px); }
+.bento-card > * { position: relative; z-index: 1; }
+
+.bento-card.breathe { position: relative; }
+.bento-card.breathe::after {
+  content: ''; position: absolute; inset: -1px; border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple), var(--accent-cyan));
+  opacity: 0; z-index: -1; filter: blur(8px);
+  animation: breatheGlowBorder 4s ease-in-out infinite;
+}
+@keyframes breatheGlowBorder { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.35; } }
+
+.bento-card.col-2 { grid-column: span 2; }
+.bento-card.col-3 { grid-column: span 3; }
+.bento-card.row-2 { grid-row: span 2; }
+
+.bento-card .card-number {
+  font-family: var(--font-mono); font-size: 48px; font-weight: 700;
+  letter-spacing: -0.03em; margin-bottom: 4px;
+}
+.bento-card .card-number.cyan { color: var(--accent-cyan); }
+.bento-card .card-number.purple { color: var(--accent-purple); }
+.bento-card .card-number.rose { color: var(--accent-rose); }
+.bento-card .card-number.amber { color: var(--accent-amber); }
+.bento-card .card-label { font-size: 14px; color: var(--text-secondary); }
+.bento-card .card-icon {
+  width: 40px; height: 40px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px; font-size: 20px;
+}
+
+/* ============================================
+   GALLERY STRIPS
+   ============================================ */
+.gallery-section { margin-bottom: 56px; }
+.gallery-section-title {
+  font-family: var(--font-display); font-size: 24px; font-weight: 600;
+  margin-bottom: 6px; display: flex; align-items: center; gap: 12px;
+}
+.gallery-section-title .tag {
+  padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+.gallery-section-title .tag.events { background: rgba(167,139,250,0.15); color: var(--accent-purple); }
+.gallery-section-title .tag.promo { background: rgba(251,113,133,0.15); color: var(--accent-rose); }
+.gallery-section-title .tag.exhibit { background: rgba(77,212,240,0.15); color: var(--accent-cyan); }
+
+.gallery-sub-label {
+  font-size: 13px; font-weight: 600; color: var(--text-secondary);
+  margin: 6px 0 8px; padding-top: 8px;
+  border-top: 1px solid var(--border-subtle);
+}
+.gallery-sub-label:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+
+.gallery-strip {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  padding: 4px 0 20px;
+}
+
+.gallery-thumb {
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  overflow: hidden; border: 1px solid var(--border-subtle);
+  transition: all 0.35s var(--transition-smooth);
+  background: rgba(255,255,255,0.02);
+  position: relative;
+}
+.gallery-thumb:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.gallery-thumb img {
+  display: block; object-fit: cover; width: 100%; height: 100%;
+  transition: transform 0.5s var(--transition-smooth);
+}
+.gallery-thumb:hover img { transform: scale(1.06); }
+.gallery-thumb .thumb-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 32px 12px 10px;
+  background: linear-gradient(to top, rgba(8,8,15,0.85), transparent);
+  font-size: 13px; color: var(--text-secondary);
+  opacity: 0; transition: opacity 0.3s;
+  pointer-events: none; text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.gallery-thumb:hover .thumb-caption { opacity: 1; }
+
+/* Thumb sizes */
+.gallery-thumb.sq { width: 280px; height: 280px; }
+.gallery-thumb.wide { width: 420px; height: 260px; }
+.gallery-thumb.tall { width: 260px; height: 360px; }
+
+/* ============================================
+   FULLSCREEN GALLERY OVERLAY
+   ============================================ */
+.gallery-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(2,2,6,0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex; flex-direction: column;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.4s;
+}
+.gallery-overlay.active { opacity: 1; pointer-events: auto; }
+
+.gallery-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px; flex-shrink: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(8,8,15,0.8);
+}
+.gallery-toolbar .gallery-title {
+  font-family: var(--font-display); font-size: 18px; font-weight: 600;
+}
+.gallery-toolbar .gallery-count { font-size: 13px; color: var(--text-tertiary); }
+.gallery-close {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.08); border: none;
+  color: var(--text-secondary); cursor: pointer;
+  font-size: 20px; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.gallery-close:hover { background: rgba(255,255,255,0.15); }
+
+.gallery-body {
+  flex: 1; display: flex; overflow: hidden; position: relative;
+}
+
+/* Thumbnail sidebar */
+.gallery-thumbs-panel {
+  width: 240px; flex-shrink: 0; overflow-y: auto; overflow-x: hidden;
+  padding: 12px; border-right: 1px solid rgba(255,255,255,0.06);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.08) transparent;
+}
+.gallery-thumbs-panel::-webkit-scrollbar { width: 3px; }
+.gallery-thumbs-panel::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
+.gallery-thumbs-panel .nav-thumb {
+  width: 100%; aspect-ratio: 16/11; object-fit: cover;
+  border-radius: 8px; cursor: pointer; border: 2px solid transparent;
+  margin-bottom: 8px; display: block;
+  transition: all 0.2s; opacity: 0.55;
+}
+.gallery-thumbs-panel .nav-thumb:hover { opacity: 0.85; }
+.gallery-thumbs-panel .nav-thumb.active { border-color: var(--accent-cyan); opacity: 1; }
+
+/* Main viewer */
+.gallery-viewer {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  position: relative; background: rgba(0,0,0,0.3);
+}
+.gallery-viewer img {
+  max-width: 92%; max-height: 88vh;
+  object-fit: contain; border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transition: opacity 0.2s;
+}
+
+.gallery-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-primary); cursor: pointer;
+  font-size: 20px; display: flex; align-items: center; justify-content: center;
+  transition: all 0.25s; z-index: 2;
+}
+.gallery-nav:hover { background: rgba(255,255,255,0.15); }
+.gallery-nav.prev { left: 24px; }
+.gallery-nav.next { right: 24px; }
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before {
+  content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-purple), transparent);
+}
+.timeline-item { position: relative; padding-bottom: 48px; padding-left: 32px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: ''; position: absolute; left: -28px; top: 6px;
+  width: 10px; height: 10px; border-radius: 50%; background: var(--accent-cyan);
+  box-shadow: 0 0 12px rgba(77,212,240,0.4);
+}
+.timeline-item:nth-child(2)::before { background: var(--accent-purple); box-shadow: 0 0 12px rgba(167,139,250,0.4); }
+.timeline-item:nth-child(3)::before { background: var(--accent-rose); box-shadow: 0 0 12px rgba(251,113,133,0.4); }
+.timeline-item:nth-child(4)::before { background: var(--accent-amber); box-shadow: 0 0 12px rgba(251,191,36,0.4); }
+.timeline-date { font-family: var(--font-mono); font-size: 13px; color: var(--text-tertiary); margin-bottom: 4px; }
+.timeline-title { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+.timeline-subtitle { font-size: 14px; color: var(--text-secondary); }
+.timeline-desc { font-size: 13px; color: var(--text-tertiary); margin-top: 8px; line-height: 1.6; }
+
+/* ============================================
+   SKILL TAGS
+   ============================================ */
+.tags-container { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-tag {
+  padding: 10px 20px; border-radius: 100px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle);
+  font-size: 14px; font-weight: 500; color: var(--text-secondary);
+  transition: all 0.3s var(--transition-smooth); cursor: default;
+}
+.skill-tag:hover {
+  background: rgba(255,255,255,0.08); border-color: var(--border-glow);
+  color: var(--text-primary); transform: translateY(-2px);
+}
+.skill-tag.primary { background: rgba(77,212,240,0.1); border-color: rgba(77,212,240,0.25); color: var(--accent-cyan); }
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.contact-card {
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg); padding: 32px;
+  display: flex; align-items: center; gap: 20px;
+  transition: all 0.3s var(--transition-smooth);
+  text-decoration: none; color: inherit;
+}
+.contact-card:hover { border-color: var(--border-glow); background: var(--bg-card-hover); transform: translateY(-2px); }
+.contact-icon {
+  width: 48px; height: 48px; border-radius: var(--radius-sm);
+  background: rgba(77,212,240,0.1); display: flex; align-items: center;
+  justify-content: center; font-size: 20px; flex-shrink: 0;
+}
+.contact-info h4 { font-size: 16px; font-weight: 600; margin-bottom: 2px; }
+.contact-info span { font-size: 14px; color: var(--text-secondary); }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  padding: 60px 0 40px; border-top: 1px solid var(--border-subtle);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-brand { font-family: var(--font-display); font-size: 18px; font-weight: 700; }
+.footer-copy { font-size: 13px; color: var(--text-tertiary); }
+
+/* ============================================
+   ANIMATIONS - Scroll Reveal
+   ============================================ */
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ============================================
+   TILT
+   ============================================ */
+.tilt-card {
+  transform-style: preserve-3d; transform: perspective(1000px);
+  transition: none;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .hero { padding: 140px 0 80px; }
+  .hero-content { display: flex; flex-direction: column; align-items: center; }
+  .hero-meta { justify-content: center; }
+  .hero-title { max-width: 100%; }
+  .hero-bg-portrait img {
+    mask-image: radial-gradient(ellipse 60% 55% at 65% 50%, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 55% at 65% 50%, black 30%, transparent 75%);
+  }
+  .hero-bg-veil { background: linear-gradient(to right, rgba(8,8,15,0.8) 0%, rgba(8,8,15,0.5) 50%, rgba(8,8,15,0.15) 70%, rgba(8,8,15,0.35) 100%); }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .bento-card.col-3 { grid-column: span 2; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .gallery-thumb.sq { width: 200px; height: 200px; }
+  .gallery-thumb.wide { width: 300px; height: 190px; }
+  .gallery-thumb.tall { width: 190px; height: 260px; }
+  .gallery-thumbs-panel { display: none; }
+}
+@media (max-width: 768px) {
+  .main-container { padding: 0 20px; }
+  .nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 120px 0 60px; }
+  .hero-content { align-items: center; }
+  .hero-meta { justify-content: center; }
+  .hero-bg-portrait img {
+    mask-image: radial-gradient(ellipse 55% 50% at 60% 45%, black 25%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 55% 50% at 60% 45%, black 25%, transparent 70%);
+  }
+  .hero-bg-veil { background: linear-gradient(to right, rgba(8,8,15,0.85) 0%, rgba(8,8,15,0.55) 50%, rgba(8,8,15,0.2) 70%, rgba(8,8,15,0.45) 100%); }
+  .hero-name { font-size: clamp(36px, 12vw, 56px); }
+  .bento-grid { grid-template-columns: 1fr; }
+  .bento-card.col-2, .bento-card.col-3 { grid-column: span 1; }
+  .section { padding: 60px 0; }
+  .footer { flex-direction: column; text-align: center; }
+  .gallery-strip { gap: 10px; }
+  .gallery-thumb.sq { width: calc(50% - 5px); height: auto; aspect-ratio: 1; }
+  .gallery-thumb.wide { width: 100%; height: auto; aspect-ratio: 16/9; }
+  .gallery-thumb.tall { width: calc(50% - 5px); height: auto; aspect-ratio: 2/3; }
+  .gallery-nav { width: 40px; height: 40px; }
+  .gallery-nav.prev { left: 8px; }
+  .gallery-nav.next { right: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aurora-orb { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Aurora Background -->
+<div class="aurora-layer" aria-hidden="true">
+  <div class="aurora-orb"></div>
+  <div class="aurora-orb"></div>
+  <div class="aurora-orb"></div>
+</div>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">ZIHAN</div>
+  <ul class="nav-links">
+    <li><a href="#about">关于</a></li>
+    <li><a href="#projects">项目</a></li>
+    <li><a href="#timeline">经历</a></li>
+    <li><a href="#skills">能力</a></li>
+    <li><a href="#contact">联系</a></li>
+  </ul>
+</nav>
+
+<!-- Main Container -->
+<div class="main-container">
+
+  <!-- ========== HERO ========== -->
+  <section class="hero reveal" id="hero">
+    <div class="hero-bg-portrait">
+      <img src="images/hero-portrait.jpg" alt="">
+    </div>
+    <div class="hero-bg-veil" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ 品牌视觉设计师 / 三一重能</div>
+      <h1 class="hero-name">张<span class="highlight">子寒</span></h1>
+      <p class="hero-title">
+        专注品牌视觉系统构建，从物料体系到活动全案，用设计语言传递品牌价值。
+        四年间主导 50+ 场活动视觉、连续三年操盘北京风能展全案。
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="dot cyan"></span>北京 · 中国</div>
+        <div class="hero-meta-item"><span class="dot purple"></span>视觉传达设计</div>
+        <div class="hero-meta-item"><span class="dot amber"></span>4+ 年品牌经验</div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <path d="M7 13l5 5 5-5"/><path d="M12 18V6"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS BENTO ========== -->
+  <section class="section" id="about">
+    <div class="section-label reveal">数据概览</div>
+    <h2 class="section-title reveal reveal-delay-1">创作足迹</h2>
+    <p class="section-desc reveal reveal-delay-1">数字背后的设计实践，每一组数据都是一个品牌故事。</p>
+
+    <div class="bento-grid">
+      <div class="bento-card breathe tilt-card reveal reveal-delay-1" data-tilt>
+        <div class="card-number cyan counter" data-target="50" data-suffix="+">0</div>
+        <div class="card-label">场活动视觉全案</div>
+      </div>
+      <div class="bento-card breathe tilt-card reveal reveal-delay-2" data-tilt>
+        <div class="card-number purple counter" data-target="3" data-suffix="">0</div>
+        <div class="card-label">届北京风能展主视觉</div>
+      </div>
+      <div class="bento-card col-2 breathe reveal reveal-delay-3">
+        <div style="display:flex;align-items:center;gap:24px;height:100%;">
+          <div>
+            <div class="card-number amber counter" data-target="10" data-suffix="+">0</div>
+            <div class="card-label">款文创产品开发</div>
+          </div>
+          <div style="flex:1;text-align:right;">
+            <span style="font-family:var(--font-mono);font-size:13px;color:var(--text-tertiary);">覆盖三大品类</span><br>
+            <span style="font-size:13px;color:var(--text-secondary);">海报 · 杂志 · 画册 · 物料</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card row-2 tilt-card reveal reveal-delay-1" data-tilt style="display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div class="card-icon" style="background:rgba(77,212,240,0.1);">🎓</div>
+          <div style="font-family:var(--font-display);font-size:18px;font-weight:600;margin-bottom:4px;">长春理工大学</div>
+          <div style="font-size:13px;color:var(--text-secondary);">视觉传达设计 · 学士</div>
+        </div>
+        <div style="font-size:12px;color:var(--text-tertiary);">2018 — 2022</div>
+      </div>
+      <div class="bento-card col-2 tilt-card reveal reveal-delay-2" data-tilt>
+        <div style="display:flex;align-items:center;gap:24px;height:100%;">
+          <div>
+            <div class="card-number rose counter" data-target="28" data-suffix="">0</div>
+            <div class="card-label">个品牌活动项目</div>
+          </div>
+          <div style="flex:1;font-size:13px;color:var(--text-secondary);line-height:1.6;">
+            覆盖开工仪式 · 客户活动 · 行业展会<br>国际展会（德国汉堡风能展 · 摩洛哥展会）
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SELECTED PROJECTS ========== -->
+  <section class="section" id="projects">
+    <div class="section-label reveal">精选项目</div>
+    <h2 class="section-title reveal reveal-delay-1">代表作品</h2>
+    <p class="section-desc reveal reveal-delay-1">按文件夹分类全量展示，点击任意缩略图进入全尺寸浏览。</p>
+
+    <!-- ===== 品牌活动视觉 ===== -->
+    <div class="gallery-section reveal reveal-delay-1">
+      <div class="gallery-section-title">
+        <span class="tag events">品牌活动视觉</span>
+        25+ 场活动 · 63 张作品
+      </div>
+      <div class="gallery-strip" id="strip-events">
+        <div class="gallery-thumb sq" data-gallery="events" data-index="0"><img src="images/brand-events/1、KV.jpg" loading="lazy" alt="东北区域 KV"><div class="thumb-caption">东北区域活动 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="1"><img src="images/brand-events/1、主kv.jpg" loading="lazy" alt="巴彦淖尔主 KV"><div class="thumb-caption">巴彦淖尔活动主 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="2"><img src="images/brand-events/1、展台效果.png" loading="lazy" alt="苏州展台"><div class="thumb-caption">苏州展台效果</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="3"><img src="images/brand-events/1、签到板欢迎板5×3m-01.jpg" loading="lazy" alt="签到板"><div class="thumb-caption">中风速研讨会签到板</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="4"><img src="images/brand-events/1晚宴KV.jpg" loading="lazy" alt="晚宴 KV"><div class="thumb-caption">韶山工厂晚宴 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="5"><img src="images/brand-events/2、指示牌（易拉宝）1.8m  X 0.8m-07.jpg" loading="lazy" alt="指示牌"><div class="thumb-caption">研讨会指示牌</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="6"><img src="images/brand-events/KV画面.jpg" loading="lazy" alt="宣讲会 KV"><div class="thumb-caption">协同开发宣讲会 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="7"><img src="images/brand-events/kv16 9.jpg" loading="lazy" alt="宣讲会 16:9"><div class="thumb-caption">宣讲会 KV 16:9</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="8"><img src="images/brand-events/kv6.jpg" loading="lazy" alt="新疆区域 KV"><div class="thumb-caption">新疆区域活动 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="9"><img src="images/brand-events/kv长年会盛典.jpg" loading="lazy" alt="年会盛典 KV"><div class="thumb-caption">年会盛典 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="10"><img src="images/brand-events/三一重能展板 (1).jpg" loading="lazy" alt="展板 1"><div class="thumb-caption">三一重能展板 ①</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="11"><img src="images/brand-events/三一重能展板 (2).jpg" loading="lazy" alt="展板 2"><div class="thumb-caption">三一重能展板 ②</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="12"><img src="images/brand-events/三一重能展板 (3).jpg" loading="lazy" alt="展板 3"><div class="thumb-caption">三一重能展板 ③</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="13"><img src="images/brand-events/三一重能展板 (4).jpg" loading="lazy" alt="展板 4"><div class="thumb-caption">三一重能展板 ④</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="14"><img src="images/brand-events/三一重能展板.jpg" loading="lazy" alt="哈密展板"><div class="thumb-caption">新疆哈密展板</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="15"><img src="images/brand-events/三一重能展板0.8mX1.8m-01.jpg" loading="lazy" alt="东北亚展板 01"><div class="thumb-caption">东北亚博览会展板 ①</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="16"><img src="images/brand-events/三一重能展板0.8mX1.8m-02.jpg" loading="lazy" alt="东北亚展板 02"><div class="thumb-caption">东北亚博览会展板 ②</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="17"><img src="images/brand-events/三一重能展板0.8mX1.8m-03.jpg" loading="lazy" alt="东北亚展板 03"><div class="thumb-caption">东北亚博览会展板 ③</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="18"><img src="images/brand-events/三一重能展板0.8mX1.8m-04.jpg" loading="lazy" alt="东北亚展板 04"><div class="thumb-caption">东北亚博览会展板 ④</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="19"><img src="images/brand-events/三一重能展板0.8mX1.8m-05.jpg" loading="lazy" alt="东北亚展板 05"><div class="thumb-caption">东北亚博览会展板 ⑤</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="20"><img src="images/brand-events/三一重能展板0.8mX1.8m-06.jpg" loading="lazy" alt="东北亚展板 06"><div class="thumb-caption">东北亚博览会展板 ⑥</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="21"><img src="images/brand-events/下线仪式.jpg" loading="lazy" alt="东营下线仪式"><div class="thumb-caption">东营工厂下线仪式</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="22"><img src="images/brand-events/东北区域活动KV.jpg" loading="lazy" alt="东北活动 KV"><div class="thumb-caption">东北区域活动 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="23"><img src="images/brand-events/主视觉背景.jpg" loading="lazy" alt="北大桥主视觉"><div class="thumb-caption">北大桥活动主视觉</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="24"><img src="images/brand-events/侧.jpg" loading="lazy" alt="年会侧屏"><div class="thumb-caption">春节年会侧屏</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="25"><img src="images/brand-events/侧屏.jpg" loading="lazy" alt="新疆侧屏"><div class="thumb-caption">新疆活动侧屏</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="26"><img src="images/brand-events/公司展板.jpg" loading="lazy" alt="苏州公司展板"><div class="thumb-caption">苏州展公司展板</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="27"><img src="images/brand-events/关键岗会议画面设计.jpg" loading="lazy" alt="关键岗会议"><div class="thumb-caption">关键岗会议画面</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="28"><img src="images/brand-events/内蒙古区域活动主视觉.jpg" loading="lazy" alt="内蒙主视觉"><div class="thumb-caption">内蒙古区域活动</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="29"><img src="images/brand-events/务虚会议主视觉.jpg" loading="lazy" alt="务虚会议"><div class="thumb-caption">务虚会议主视觉</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="30"><img src="images/brand-events/北大桥展板1.jpg" loading="lazy" alt="北大桥展板 1"><div class="thumb-caption">北大桥展板 ①</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="31"><img src="images/brand-events/北大桥展板2.jpg" loading="lazy" alt="北大桥展板 2"><div class="thumb-caption">北大桥展板 ②</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="32"><img src="images/brand-events/北大桥展板3.jpg" loading="lazy" alt="北大桥展板 3"><div class="thumb-caption">北大桥展板 ③</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="33"><img src="images/brand-events/叶片展板.jpg" loading="lazy" alt="苏州叶片展板"><div class="thumb-caption">苏州展叶片展板</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="34"><img src="images/brand-events/奠基仪式舞台背景（14x4）最新-01.jpg" loading="lazy" alt="通河奠基"><div class="thumb-caption">通河开工奠基仪式</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="35"><img src="images/brand-events/宣传展板.jpg" loading="lazy" alt="苏州宣传展板"><div class="thumb-caption">苏州展宣传展板</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="36"><img src="images/brand-events/展板3_画板 1.jpg" loading="lazy" alt="摩洛哥展板 A"><div class="thumb-caption">摩洛哥展会展板 A</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="37"><img src="images/brand-events/展板3-03.jpg" loading="lazy" alt="摩洛哥展板 B"><div class="thumb-caption">摩洛哥展会展板 B</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="38"><img src="images/brand-events/工厂kv.jpg" loading="lazy" alt="韶山工厂 KV"><div class="thumb-caption">韶山工厂 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="39"><img src="images/brand-events/巴彦淖尔活动全部_物料 1.jpg" loading="lazy" alt="巴彦淖尔物料"><div class="thumb-caption">巴彦淖尔全部物料</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="40"><img src="images/brand-events/开业仪式2.jpg" loading="lazy" alt="东营开业"><div class="thumb-caption">东营工厂开业仪式</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="41"><img src="images/brand-events/开工背景.jpg" loading="lazy" alt="塔城开工"><div class="thumb-caption">塔城工厂开工背景</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="42"><img src="images/brand-events/总合计.jpg" loading="lazy" alt="内蒙总合计"><div class="thumb-caption">内蒙活动总合计</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="43"><img src="images/brand-events/总展示.jpg" loading="lazy" alt="新疆总展示"><div class="thumb-caption">新疆活动总展示</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="44"><img src="images/brand-events/指示牌2_论坛指引牌.jpg" loading="lazy" alt="韶山指引"><div class="thumb-caption">韶山论坛指引牌</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="45"><img src="images/brand-events/效果图.jpg" loading="lazy" alt="零碳效果图"><div class="thumb-caption">零碳产业园效果图</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="46"><img src="images/brand-events/整体.png" loading="lazy" alt="务虚会议整体"><div class="thumb-caption">务虚会议整体效果</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="47"><img src="images/brand-events/新疆区域活动KV.jpg" loading="lazy" alt="新疆 KV 2025"><div class="thumb-caption">新疆区域活动 KV 2025</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="48"><img src="images/brand-events/春节活动画面.jpg" loading="lazy" alt="春节年会"><div class="thumb-caption">春节年会活动画面</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="49"><img src="images/brand-events/智能制造展板.jpg" loading="lazy" alt="苏州智造展板"><div class="thumb-caption">苏州展智能制造展板</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="50"><img src="images/brand-events/水牌.jpg" loading="lazy" alt="韶山水牌"><div class="thumb-caption">韶山工厂水牌</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="51"><img src="images/brand-events/活动kv.jpg" loading="lazy" alt="中风速 KV"><div class="thumb-caption">中风速研讨会活动 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="52"><img src="images/brand-events/活动KV.png" loading="lazy" alt="西南活动 KV"><div class="thumb-caption">西南客户活动 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="53"><img src="images/brand-events/活动KV1.png" loading="lazy" alt="西南活动 KV1"><div class="thumb-caption">西南客户活动 KV ②</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="54"><img src="images/brand-events/活动主视觉.jpg" loading="lazy" alt="零碳主视觉"><div class="thumb-caption">巴彦淖尔零碳主视觉</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="55"><img src="images/brand-events/活动视觉（新疆）.jpg" loading="lazy" alt="新疆年会"><div class="thumb-caption">新疆年会活动视觉</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="56"><img src="images/brand-events/电子水牌.jpg" loading="lazy" alt="电子水牌"><div class="thumb-caption">新疆活动电子水牌</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="57"><img src="images/brand-events/石家庄区域活动物料展示.jpg" loading="lazy" alt="石家庄物料"><div class="thumb-caption">石家庄区域活动物料</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="58"><img src="images/brand-events/研发展板.jpg" loading="lazy" alt="苏州研发展板"><div class="thumb-caption">苏州展研发展板</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="59"><img src="images/brand-events/论坛KV.jpg" loading="lazy" alt="石家庄论坛 KV"><div class="thumb-caption">石家庄论坛 KV</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="60"><img src="images/brand-events/运维展板.jpg" loading="lazy" alt="苏州运维展板"><div class="thumb-caption">苏州展运维展板</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="61"><img src="images/brand-events/邀请函.jpg" loading="lazy" alt="东北邀请函"><div class="thumb-caption">东北区域活动邀请函</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="62"><img src="images/brand-events/项目展板.jpg" loading="lazy" alt="苏州项目展板"><div class="thumb-caption">苏州展项目展板</div></div>
+        <div class="gallery-thumb sq" data-gallery="events" data-index="63"><img src="images/brand-events/项目展板1.jpg" loading="lazy" alt="苏州项目展板 1"><div class="thumb-caption">苏州展项目展板 ②</div></div>
+      </div>
+    </div>
+
+    <!-- ===== 品牌宣传视觉 ===== -->
+    <div class="gallery-section reveal reveal-delay-1">
+      <div class="gallery-section-title">
+        <span class="tag promo">品牌宣传视觉</span>
+        公众号 · 海报 · 画册 · 杂志 · 42 张作品
+      </div>
+      <div class="gallery-strip" id="strip-promo">
+        <div class="gallery-sub-label" style="width:100%;flex-shrink:0;">— 公众号 Banner —</div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="0"><img src="images/brand-promo/公众号类/20240430公众号banner.png" loading="lazy" alt="公众号 0430"><div class="thumb-caption">公众号 Banner 2024.04.30</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="1"><img src="images/brand-promo/公众号类/20240527公众号banner.png" loading="lazy" alt="公众号 0527"><div class="thumb-caption">公众号 Banner 2024.05.27</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="2"><img src="images/brand-promo/公众号类/20240621公众号banner (2).png" loading="lazy" alt="公众号 0621"><div class="thumb-caption">公众号 Banner 2024.06.21</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="3"><img src="images/brand-promo/公众号类/20240623公众号banner.png" loading="lazy" alt="公众号 0623"><div class="thumb-caption">公众号 Banner 2024.06.23</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="4"><img src="images/brand-promo/公众号类/20240628公众号banner.png" loading="lazy" alt="公众号 0628"><div class="thumb-caption">公众号 Banner 2024.06.28</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="5"><img src="images/brand-promo/公众号类/20240704公众号banner.png" loading="lazy" alt="公众号 0704"><div class="thumb-caption">公众号 Banner 2024.07.04</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="6"><img src="images/brand-promo/公众号类/20240813公众号banner.png" loading="lazy" alt="公众号 0813"><div class="thumb-caption">公众号 Banner 2024.08.13</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="7"><img src="images/brand-promo/公众号类/2024082公众号banner.png" loading="lazy" alt="公众号 0802"><div class="thumb-caption">公众号 Banner 2024.08.02</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="8"><img src="images/brand-promo/公众号类/20240903公众号banner.png" loading="lazy" alt="公众号 0903"><div class="thumb-caption">公众号 Banner 2024.09.03</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="9"><img src="images/brand-promo/公众号类/20241008公众号banner.png" loading="lazy" alt="公众号 1008"><div class="thumb-caption">公众号 Banner 2024.10.08</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="10"><img src="images/brand-promo/公众号类/20241010公众号banner.png" loading="lazy" alt="公众号 1010"><div class="thumb-caption">公众号 Banner 2024.10.10</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="11"><img src="images/brand-promo/公众号类/20241017公众号banner.png" loading="lazy" alt="公众号 1017"><div class="thumb-caption">公众号 Banner 2024.10.17</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="12"><img src="images/brand-promo/公众号类/20250114公众号banner.jpg" loading="lazy" alt="公众号 0114"><div class="thumb-caption">公众号 Banner 2025.01.14</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="13"><img src="images/brand-promo/公众号类/20250313公众号banner.png" loading="lazy" alt="公众号 0313"><div class="thumb-caption">公众号 Banner 2025.03.13</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="14"><img src="images/brand-promo/公众号类/20251013公众号banner.png" loading="lazy" alt="公众号 1013"><div class="thumb-caption">公众号 Banner 2025.10.13</div></div>
+
+        <div class="gallery-sub-label" style="width:100%;flex-shrink:0;">— 海报设计 —</div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="15"><img src="images/brand-promo/海报类/世界地球日海报.jpg" loading="lazy" alt="地球日"><div class="thumb-caption">世界地球日</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="16"><img src="images/brand-promo/海报类/世界环境日海报.jpg" loading="lazy" alt="环境日"><div class="thumb-caption">世界环境日</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="17"><img src="images/brand-promo/海报类/元宵节海报.jpg" loading="lazy" alt="元宵节"><div class="thumb-caption">元宵节</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="18"><img src="images/brand-promo/海报类/劳动节海报/1黄色（中文）.jpg" loading="lazy" alt="劳动节黄"><div class="thumb-caption">劳动节 · 黄色版</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="19"><img src="images/brand-promo/海报类/劳动节海报/叶片（中文）.jpg" loading="lazy" alt="劳动节叶片"><div class="thumb-caption">劳动节 · 叶片</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="20"><img src="images/brand-promo/海报类/劳动节海报/智能制造（中文版）.jpg" loading="lazy" alt="劳动节智造"><div class="thumb-caption">劳动节 · 智能制造</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="21"><img src="images/brand-promo/海报类/劳动节海报/电机（中文）.jpg" loading="lazy" alt="劳动节电机"><div class="thumb-caption">劳动节 · 电机</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="22"><img src="images/brand-promo/海报类/劳动节海报/运维（中文）.jpg" loading="lazy" alt="劳动节运维"><div class="thumb-caption">劳动节 · 运维</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="23"><img src="images/brand-promo/海报类/奖项海报.jpg" loading="lazy" alt="奖项 1"><div class="thumb-caption">奖项海报 ①</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="24"><img src="images/brand-promo/海报类/奖项海报2.jpg" loading="lazy" alt="奖项 2"><div class="thumb-caption">奖项海报 ②</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="25"><img src="images/brand-promo/海报类/奖项海报3.jpg" loading="lazy" alt="奖项 3"><div class="thumb-caption">奖项海报 ③</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="26"><img src="images/brand-promo/海报类/奖项海报4.jpg" loading="lazy" alt="奖项 4"><div class="thumb-caption">奖项海报 ④</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="27"><img src="images/brand-promo/海报类/宰牲节海报.jpg" loading="lazy" alt="宰牲节"><div class="thumb-caption">宰牲节</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="28"><img src="images/brand-promo/海报类/清明节海报.jpg" loading="lazy" alt="清明节"><div class="thumb-caption">清明节</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="29"><img src="images/brand-promo/海报类/父亲节海报.jpg" loading="lazy" alt="父亲节"><div class="thumb-caption">父亲节</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="30"><img src="images/brand-promo/海报类/端午节海报.jpg" loading="lazy" alt="端午节"><div class="thumb-caption">端午节</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="31"><img src="images/brand-promo/海报类/财神节海报.jpg" loading="lazy" alt="财神节"><div class="thumb-caption">财神节</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="32"><img src="images/brand-promo/海报类/项目长图.jpg" loading="lazy" alt="项目长图"><div class="thumb-caption">项目长图</div></div>
+
+        <div class="gallery-sub-label" style="width:100%;flex-shrink:0;">— 杂志排版 —</div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="33"><img src="images/brand-promo/杂志类/20260511杂志内页-规格-216x291.jpg" loading="lazy" alt="杂志内页 2026"><div class="thumb-caption">杂志内页 2026</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="34"><img src="images/brand-promo/杂志类/三一重能内页216mmx291mm(2)_画板 1.jpg" loading="lazy" alt="三一内页"><div class="thumb-caption">三一重能杂志内页 ①</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="35"><img src="images/brand-promo/杂志类/参考设计文件1_画板 1 副本 3.jpg" loading="lazy" alt="参考设计 1"><div class="thumb-caption">参考设计文件 ①</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="36"><img src="images/brand-promo/杂志类/参考设计文件_画板 1 副本 3.jpg" loading="lazy" alt="参考设计 2"><div class="thumb-caption">参考设计文件 ②</div></div>
+        <div class="gallery-thumb tall" data-gallery="promo" data-index="37"><img src="images/brand-promo/杂志类/风电后市场发展报告杂志内页-规格-216x291.jpg" loading="lazy" alt="风电后市场"><div class="thumb-caption">风电后市场发展报告</div></div>
+
+        <div class="gallery-sub-label" style="width:100%;flex-shrink:0;">— 画册设计 —</div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="38"><img src="images/brand-promo/画册类/产品手册.png" loading="lazy" alt="产品手册"><div class="thumb-caption">产品手册 ①</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="39"><img src="images/brand-promo/画册类/产品手册1.png" loading="lazy" alt="产品手册 1"><div class="thumb-caption">产品手册 ②</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="40"><img src="images/brand-promo/画册类/产品手册2.png" loading="lazy" alt="产品手册 2"><div class="thumb-caption">产品手册 ③</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="41"><img src="images/brand-promo/画册类/企业画册.png" loading="lazy" alt="企业画册"><div class="thumb-caption">企业画册</div></div>
+      </div>
+    </div>
+
+    <!-- ===== 展会视觉 ===== -->
+    <div class="gallery-section reveal reveal-delay-1">
+      <div class="gallery-section-title">
+        <span class="tag exhibit">展会视觉</span>
+        三届北京风能展 · 14 张作品
+      </div>
+      <div class="gallery-strip" id="strip-exhibit">
+        <div class="gallery-sub-label" style="width:100%;flex-shrink:0;">— 2023 · 十五年 更可靠 —</div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="0"><img src="images/exhibition/2023风能展/2023风能展主视觉.jpg" loading="lazy" alt="2023 风能展主视觉"><div class="thumb-caption">2023 风能展主视觉</div></div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="1"><img src="images/exhibition/2023风能展/2023风能展论坛主视觉 (1).jpg" loading="lazy" alt="2023 论坛 1"><div class="thumb-caption">2023 论坛主视觉 ①</div></div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="2"><img src="images/exhibition/2023风能展/2023风能展论坛主视觉 (2).jpg" loading="lazy" alt="2023 论坛 2"><div class="thumb-caption">2023 论坛主视觉 ②</div></div>
+        <div class="gallery-thumb tall" data-gallery="exhibit" data-index="3"><img src="images/exhibition/2023风能展/2023风能展邀请函.jpg" loading="lazy" alt="2023 邀请函"><div class="thumb-caption">2023 风能展邀请函</div></div>
+
+        <div class="gallery-sub-label" style="width:100%;flex-shrink:0;">— 2024 · 全生命周期安全可靠 —</div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="4"><img src="images/exhibition/2024风能展/2024年风能展论坛主视觉.jpg" loading="lazy" alt="2024 论坛主视觉"><div class="thumb-caption">2024 论坛主视觉</div></div>
+        <div class="gallery-thumb tall" data-gallery="exhibit" data-index="5"><img src="images/exhibition/2024风能展/三一重能风能展邀请函长图_01.jpg" loading="lazy" alt="2024 邀请函"><div class="thumb-caption">2024 邀请函长图</div></div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="6"><img src="images/exhibition/2024风能展/副屏.jpg" loading="lazy" alt="2024 副屏"><div class="thumb-caption">2024 副屏视觉</div></div>
+
+        <div class="gallery-sub-label" style="width:100%;flex-shrink:0;">— 2025 · 价值共生，可靠同行 —</div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="7"><img src="images/exhibition/2025风能展/1、风能展论坛主视觉.jpg" loading="lazy" alt="2025 论坛主视觉"><div class="thumb-caption">2025 论坛主视觉</div></div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="8"><img src="images/exhibition/2025风能展/2、侧屏.jpg" loading="lazy" alt="2025 侧屏"><div class="thumb-caption">2025 侧屏视觉</div></div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="9"><img src="images/exhibition/2025风能展/2025风能展.jpg" loading="lazy" alt="2025 主视觉"><div class="thumb-caption">2025 风能展主视觉</div></div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="10"><img src="images/exhibition/2025风能展/倒计时1.jpg" loading="lazy" alt="2025 倒计时 1"><div class="thumb-caption">2025 倒计时 ①</div></div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="11"><img src="images/exhibition/2025风能展/倒计时2.jpg" loading="lazy" alt="2025 倒计时 2"><div class="thumb-caption">2025 倒计时 ②</div></div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="12"><img src="images/exhibition/2025风能展/倒计时3.jpg" loading="lazy" alt="2025 倒计时 3"><div class="thumb-caption">2025 倒计时 ③</div></div>
+        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="13"><img src="images/exhibition/2025风能展/道旗.jpg" loading="lazy" alt="2025 道旗"><div class="thumb-caption">2025 道旗设计</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE TIMELINE ========== -->
+  <section class="section" id="timeline">
+    <div class="section-label reveal">职业历程</div>
+    <h2 class="section-title reveal reveal-delay-1">经历时间线</h2>
+    <p class="section-desc reveal reveal-delay-1">每一步都在构建更完整的品牌视觉系统。</p>
+
+    <div class="bento-grid" style="margin-top: 0;">
+      <div class="bento-card col-3 reveal reveal-delay-2">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2025 — 至今</div>
+            <div class="timeline-title">品牌视觉深化与 AI 融合</div>
+            <div class="timeline-subtitle">三一重能 · 市场管理部</div>
+            <div class="timeline-desc">连续第三年主导北京风能展全案，拓展海外展会视觉执行（摩洛哥展会），深入 AI 视觉创作工具在工作流中的融合应用。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2023 — 2024</div>
+            <div class="timeline-title">品牌物料体系搭建</div>
+            <div class="timeline-subtitle">三一重能 · 市场管理部</div>
+            <div class="timeline-desc">主导营销资料库矩阵项目，建立模块化分类标签体系；系统升级宣传册、产品资料等对外物料，确立配套视觉规范。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2022.08</div>
+            <div class="timeline-title">入职三一重能</div>
+            <div class="timeline-subtitle">品牌专员 · 市场管理部</div>
+            <div class="timeline-desc">开启品牌视觉设计职业生涯，参与北京风能展、德国汉堡风能展等重大项目视觉执行，逐步主导活动全案与供应商管理。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2018 — 2022</div>
+            <div class="timeline-title">长春理工大学</div>
+            <div class="timeline-subtitle">视觉传达设计 · 学士学位</div>
+            <div class="timeline-desc">系统学习视觉传达设计理论与实践，奠定品牌设计、排版构图、色彩管理的专业基础。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card reveal reveal-delay-3" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:16px;">
+        <div style="font-family:var(--font-mono);font-size:64px;font-weight:700;color:var(--accent-cyan);">4+</div>
+        <div style="font-size:15px;color:var(--text-secondary);">年品牌视觉<br>实战经验</div>
+        <div style="width:60%;height:1px;background:var(--border-subtle);"></div>
+        <div style="font-size:12px;color:var(--text-tertiary);">品牌规范 · 活动策划<br>展会全案 · 文创开发</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section" id="skills">
+    <div class="section-label reveal">核心能力</div>
+    <h2 class="section-title reveal reveal-delay-1">技能矩阵</h2>
+    <p class="section-desc reveal reveal-delay-1">设计工具与专业能力的复合结构。</p>
+
+    <div class="bento-grid">
+      <div class="bento-card col-2 reveal reveal-delay-1">
+        <div style="font-size:14px;font-weight:600;margin-bottom:20px;color:var(--accent-cyan);">专业能力</div>
+        <div class="tags-container">
+          <span class="skill-tag primary">视觉设计</span>
+          <span class="skill-tag primary">品牌规范执行</span>
+          <span class="skill-tag">AI 视觉创作</span>
+          <span class="skill-tag">文创产品开发</span>
+          <span class="skill-tag">跨部门协同</span>
+          <span class="skill-tag">展会物料设计</span>
+          <span class="skill-tag">品牌全案策划</span>
+          <span class="skill-tag">供应商管理</span>
+          <span class="skill-tag">素材体系搭建</span>
+          <span class="skill-tag">采购寻源</span>
+        </div>
+      </div>
+
+      <div class="bento-card col-2 reveal reveal-delay-2">
+        <div style="font-size:14px;font-weight:600;margin-bottom:20px;color:var(--accent-purple);">设计软件 & AI 工具</div>
+        <div class="tags-container">
+          <span class="skill-tag primary">Photoshop</span>
+          <span class="skill-tag primary">Illustrator</span>
+          <span class="skill-tag">Dimension</span>
+          <span class="skill-tag">ChatGPT</span>
+          <span class="skill-tag">Seedance 2.0</span>
+          <span class="skill-tag">WorkBuddy</span>
+        </div>
+      </div>
+
+      <div class="bento-card row-2 reveal reveal-delay-3" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:12px;">
+        <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,rgba(77,212,240,0.2),rgba(167,139,250,0.2));display:flex;align-items:center;justify-content:center;font-size:28px;">⚡</div>
+        <div style="font-size:16px;font-weight:600;">AI-Native<br>设计思维</div>
+        <div style="font-size:12px;color:var(--text-tertiary);">将 AI 工具融入<br>品牌设计工作流</div>
+      </div>
+
+      <div class="bento-card col-2 reveal reveal-delay-4">
+        <div style="font-size:14px;font-weight:600;margin-bottom:20px;color:var(--accent-rose);">行业领域</div>
+        <div class="tags-container">
+          <span class="skill-tag">品牌设计</span>
+          <span class="skill-tag">风电 / 新能源</span>
+          <span class="skill-tag">展会设计</span>
+          <span class="skill-tag">活动视觉</span>
+          <span class="skill-tag">B2B 工业品牌</span>
+          <span class="skill-tag">数字营销</span>
+          <span class="skill-tag">印刷物料</span>
+          <span class="skill-tag">海外展会</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section" id="contact">
+    <div class="section-label reveal">联系方式</div>
+    <h2 class="section-title reveal reveal-delay-1">建立联系</h2>
+    <p class="section-desc reveal reveal-delay-1">如有品牌视觉设计需求，欢迎随时沟通。</p>
+
+    <div class="contact-grid reveal reveal-delay-2">
+      <a href="mailto:1527881042@qq.com" class="contact-card tilt-card" data-tilt>
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info"><h4>电子邮件</h4><span>1527881042@qq.com</span></div>
+      </a>
+      <a href="tel:15030032027" class="contact-card tilt-card" data-tilt>
+        <div class="contact-icon">📱</div>
+        <div class="contact-info"><h4>联系电话</h4><span>150 3003 2027</span></div>
+      </a>
+      <div class="contact-card tilt-card" data-tilt>
+        <div class="contact-icon">📍</div>
+        <div class="contact-info"><h4>所在城市</h4><span>中国 · 北京</span></div>
+      </div>
+      <div class="contact-card tilt-card" data-tilt>
+        <div class="contact-icon">🎨</div>
+        <div class="contact-info"><h4>专业方向</h4><span>品牌视觉设计 · 活动全案</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer reveal">
+    <div class="footer-brand">张子寒</div>
+    <div class="footer-copy">© 2026 张子寒 · 品牌视觉设计师 · 保留所有权利</div>
+  </footer>
+
+</div>
+
+<!-- ========== FULLSCREEN GALLERY ========== -->
+<div class="gallery-overlay" id="gallery-overlay">
+  <div class="gallery-toolbar">
+    <div>
+      <div class="gallery-title" id="gallery-title">活动视觉</div>
+      <div class="gallery-count" id="gallery-count">1 / 63</div>
+    </div>
+    <button class="gallery-close" id="gallery-close" aria-label="关闭">&times;</button>
+  </div>
+  <div class="gallery-body">
+    <div class="gallery-thumbs-panel" id="gallery-thumbs"></div>
+    <div class="gallery-viewer" id="gallery-viewer">
+      <button class="gallery-nav prev" id="gallery-prev" aria-label="上一张">‹</button>
+      <img src="" alt="" id="gallery-main-img">
+      <button class="gallery-nav next" id="gallery-next" aria-label="下一张">›</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================
+   GALLERY DATA
+   ============================================ */
+const galleryData = {
+  events: {
+    title: '品牌活动视觉',
+    images: [
+      "images/brand-events/1、KV.jpg","images/brand-events/1、主kv.jpg","images/brand-events/1、展台效果.png","images/brand-events/1、签到板欢迎板5×3m-01.jpg","images/brand-events/1晚宴KV.jpg","images/brand-events/2、指示牌（易拉宝）1.8m  X 0.8m-07.jpg","images/brand-events/KV画面.jpg","images/brand-events/kv16 9.jpg","images/brand-events/kv6.jpg","images/brand-events/kv长年会盛典.jpg","images/brand-events/三一重能展板 (1).jpg","images/brand-events/三一重能展板 (2).jpg","images/brand-events/三一重能展板 (3).jpg","images/brand-events/三一重能展板 (4).jpg","images/brand-events/三一重能展板.jpg","images/brand-events/三一重能展板0.8mX1.8m-01.jpg","images/brand-events/三一重能展板0.8mX1.8m-02.jpg","images/brand-events/三一重能展板0.8mX1.8m-03.jpg","images/brand-events/三一重能展板0.8mX1.8m-04.jpg","images/brand-events/三一重能展板0.8mX1.8m-05.jpg","images/brand-events/三一重能展板0.8mX1.8m-06.jpg","images/brand-events/下线仪式.jpg","images/brand-events/东北区域活动KV.jpg","images/brand-events/主视觉背景.jpg","images/brand-events/侧.jpg","images/brand-events/侧屏.jpg","images/brand-events/公司展板.jpg","images/brand-events/关键岗会议画面设计.jpg","images/brand-events/内蒙古区域活动主视觉.jpg","images/brand-events/务虚会议主视觉.jpg","images/brand-events/北大桥展板1.jpg","images/brand-events/北大桥展板2.jpg","images/brand-events/北大桥展板3.jpg","images/brand-events/叶片展板.jpg","images/brand-events/奠基仪式舞台背景（14x4）最新-01.jpg","images/brand-events/宣传展板.jpg","images/brand-events/展板3_画板 1.jpg","images/brand-events/展板3-03.jpg","images/brand-events/工厂kv.jpg","images/brand-events/巴彦淖尔活动全部_物料 1.jpg","images/brand-events/开业仪式2.jpg","images/brand-events/开工背景.jpg","images/brand-events/总合计.jpg","images/brand-events/总展示.jpg","images/brand-events/指示牌2_论坛指引牌.jpg","images/brand-events/效果图.jpg","images/brand-events/整体.png","images/brand-events/新疆区域活动KV.jpg","images/brand-events/春节活动画面.jpg","images/brand-events/智能制造展板.jpg","images/brand-events/水牌.jpg","images/brand-events/活动kv.jpg","images/brand-events/活动KV.png","images/brand-events/活动KV1.png","images/brand-events/活动主视觉.jpg","images/brand-events/活动视觉（新疆）.jpg","images/brand-events/电子水牌.jpg","images/brand-events/石家庄区域活动物料展示.jpg","images/brand-events/研发展板.jpg","images/brand-events/论坛KV.jpg","images/brand-events/运维展板.jpg","images/brand-events/邀请函.jpg","images/brand-events/项目展板.jpg","images/brand-events/项目展板1.jpg"
+    ]
+  },
+  promo: {
+    title: '品牌宣传视觉',
+    images: [
+      "images/brand-promo/公众号类/20240430公众号banner.png","images/brand-promo/公众号类/20240527公众号banner.png","images/brand-promo/公众号类/20240621公众号banner (2).png","images/brand-promo/公众号类/20240623公众号banner.png","images/brand-promo/公众号类/20240628公众号banner.png","images/brand-promo/公众号类/20240704公众号banner.png","images/brand-promo/公众号类/20240813公众号banner.png","images/brand-promo/公众号类/2024082公众号banner.png","images/brand-promo/公众号类/20240903公众号banner.png","images/brand-promo/公众号类/20241008公众号banner.png","images/brand-promo/公众号类/20241010公众号banner.png","images/brand-promo/公众号类/20241017公众号banner.png","images/brand-promo/公众号类/20250114公众号banner.jpg","images/brand-promo/公众号类/20250313公众号banner.png","images/brand-promo/公众号类/20251013公众号banner.png","images/brand-promo/海报类/世界地球日海报.jpg","images/brand-promo/海报类/世界环境日海报.jpg","images/brand-promo/海报类/元宵节海报.jpg","images/brand-promo/海报类/劳动节海报/1黄色（中文）.jpg","images/brand-promo/海报类/劳动节海报/叶片（中文）.jpg","images/brand-promo/海报类/劳动节海报/智能制造（中文版）.jpg","images/brand-promo/海报类/劳动节海报/电机（中文）.jpg","images/brand-promo/海报类/劳动节海报/运维（中文）.jpg","images/brand-promo/海报类/奖项海报.jpg","images/brand-promo/海报类/奖项海报2.jpg","images/brand-promo/海报类/奖项海报3.jpg","images/brand-promo/海报类/奖项海报4.jpg","images/brand-promo/海报类/宰牲节海报.jpg","images/brand-promo/海报类/清明节海报.jpg","images/brand-promo/海报类/父亲节海报.jpg","images/brand-promo/海报类/端午节海报.jpg","images/brand-promo/海报类/财神节海报.jpg","images/brand-promo/海报类/项目长图.jpg","images/brand-promo/杂志类/20260511杂志内页-规格-216x291.jpg","images/brand-promo/杂志类/三一重能内页216mmx291mm(2)_画板 1.jpg","images/brand-promo/杂志类/参考设计文件1_画板 1 副本 3.jpg","images/brand-promo/杂志类/参考设计文件_画板 1 副本 3.jpg","images/brand-promo/杂志类/风电后市场发展报告杂志内页-规格-216x291.jpg","images/brand-promo/画册类/产品手册.png","images/brand-promo/画册类/产品手册1.png","images/brand-promo/画册类/产品手册2.png","images/brand-promo/画册类/企业画册.png"
+    ]
+  },
+  exhibit: {
+    title: '展会视觉',
+    images: [
+      "images/exhibition/2023风能展/2023风能展主视觉.jpg","images/exhibition/2023风能展/2023风能展论坛主视觉 (1).jpg","images/exhibition/2023风能展/2023风能展论坛主视觉 (2).jpg","images/exhibition/2023风能展/2023风能展邀请函.jpg","images/exhibition/2024风能展/2024年风能展论坛主视觉.jpg","images/exhibition/2024风能展/三一重能风能展邀请函长图_01.jpg","images/exhibition/2024风能展/副屏.jpg","images/exhibition/2025风能展/1、风能展论坛主视觉.jpg","images/exhibition/2025风能展/2、侧屏.jpg","images/exhibition/2025风能展/2025风能展.jpg","images/exhibition/2025风能展/倒计时1.jpg","images/exhibition/2025风能展/倒计时2.jpg","images/exhibition/2025风能展/倒计时3.jpg","images/exhibition/2025风能展/道旗.jpg"
+    ]
+  }
+};
+
+/* ============================================
+   FULLSCREEN GALLERY LOGIC
+   ============================================ */
+const overlay = document.getElementById('gallery-overlay');
+const galleryTitle = document.getElementById('gallery-title');
+const galleryCount = document.getElementById('gallery-count');
+const galleryThumbs = document.getElementById('gallery-thumbs');
+const galleryViewer = document.getElementById('gallery-viewer');
+const mainImg = document.getElementById('gallery-main-img');
+const btnPrev = document.getElementById('gallery-prev');
+const btnNext = document.getElementById('gallery-next');
+const btnClose = document.getElementById('gallery-close');
+
+let currentGallery = null;
+let currentIndex = 0;
+
+function thumbSrcToFull(fullPath){ return fullPath; }
+
+function openGallery(galleryId, startIdx) {
+  const data = galleryData[galleryId];
+  if (!data) return;
+  currentGallery = galleryId;
+  currentIndex = startIdx || 0;
+
+  galleryTitle.textContent = data.title;
+  updateCount();
+
+  // Build thumbnails
+  galleryThumbs.innerHTML = data.images.map((src, i) =>
+    `<img src="${src}" class="nav-thumb${i === currentIndex ? ' active' : ''}" data-i="${i}" alt="">`
+  ).join('');
+
+  // Show main image
+  mainImg.src = data.images[currentIndex];
+  mainImg.alt = data.title;
+
+  // Scroll active thumbnail into view
+  setTimeout(() => {
+    const active = galleryThumbs.querySelector('.nav-thumb.active');
+    if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 100);
+
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGallery() {
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+  currentGallery = null;
+}
+
+function updateCount() {
+  const data = galleryData[currentGallery];
+  if (!data) return;
+  galleryCount.textContent = `${currentIndex + 1} / ${data.images.length}`;
+}
+
+function goTo(idx) {
+  const data = galleryData[currentGallery];
+  if (!data) return;
+  currentIndex = Math.max(0, Math.min(idx, data.images.length - 1));
+  mainImg.style.opacity = '0';
+  setTimeout(() => {
+    mainImg.src = data.images[currentIndex];
+    mainImg.style.opacity = '1';
+  }, 150);
+  updateCount();
+  // Update thumbnails active
+  galleryThumbs.querySelectorAll('.nav-thumb').forEach((t, i) => {
+    t.classList.toggle('active', i === currentIndex);
+  });
+  const active = galleryThumbs.querySelector('.nav-thumb.active');
+  if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function goNext() { goTo(currentIndex + 1); }
+function goPrev() { goTo(currentIndex - 1); }
+
+// Events
+btnPrev.addEventListener('click', goPrev);
+btnNext.addEventListener('click', goNext);
+btnClose.addEventListener('click', closeGallery);
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) closeGallery();
+});
+
+// Thumbnail clicks
+galleryThumbs.addEventListener('click', (e) => {
+  const thumb = e.target.closest('.nav-thumb');
+  if (!thumb) return;
+  const i = parseInt(thumb.dataset.i);
+  goTo(i);
+});
+
+// Keyboard
+document.addEventListener('keydown', (e) => {
+  if (!overlay.classList.contains('active')) return;
+  if (e.key === 'Escape') closeGallery();
+  if (e.key === 'ArrowRight') goNext();
+  if (e.key === 'ArrowLeft') goPrev();
+});
+
+// Touch swipe
+let touchStartX = 0;
+galleryViewer.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+galleryViewer.addEventListener('touchend', (e) => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) { diff > 0 ? goNext() : goPrev(); }
+});
+
+/* ============================================
+   GALLERY CARD CLICKS
+   ============================================ */
+document.querySelectorAll('.gallery-thumb').forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    const gallery = thumb.dataset.gallery;
+    const index = parseInt(thumb.dataset.index);
+    if (gallery) openGallery(gallery, index);
+  });
+});
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ============================================
+   COUNTER ANIMATION
+   ============================================ */
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const duration = 2000;
+      const start = performance.now();
+      function updateCounter(timestamp) {
+        const elapsed = timestamp - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (progress < 1) requestAnimationFrame(updateCounter);
+      }
+      requestAnimationFrame(updateCounter);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+/* ============================================
+   PARALLAX TILT (tvOS style)
+   ============================================ */
+document.querySelectorAll('.tilt-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -8;
+    const rotateY = ((x - centerX) / centerX) * 8;
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    const percentX = (x / rect.width) * 100;
+    const percentY = (y / rect.height) * 100;
+    card.style.setProperty('--mouse-x', percentX + '%');
+    card.style.setProperty('--mouse-y', percentY + '%');
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    card.style.setProperty('--mouse-x', '50%');
+    card.style.setProperty('--mouse-y', '50%');
+  });
+});
+
+/* ============================================
+   NAV SCROLL EFFECT
+   ============================================ */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 50) { nav.classList.add('scrolled'); }
+  else { nav.classList.remove('scrolled'); }
+}, { passive: true });
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.tilt-card').forEach(card => {
+    card.style.transform = 'none'; card.style.transition = 'none';
+  });
+}
+</script>
+
+</body>
+</html>
