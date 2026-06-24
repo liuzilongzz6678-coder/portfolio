@@ -1,287 +1,103 @@
-=== HTML START ===
-    <!-- ===== 品牌宣传视觉 ===== -->
-    <div class="gallery-section reveal reveal-delay-1">
-      <div class="gallery-section-title">
-        <span class="tag promo">品牌宣传视觉</span>
-        51 张作品
-      </div>
-      <div class="gallery-sub-label">海报类 · 19 张</div>
-      <div class="gallery-strip">
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="0"><img src="images/brand-promo/1-海报类/1世界地球日海报 (1).jpg" loading="lazy" alt="1世界地球日海报 (1)"><div class="thumb-caption">海报类 · 1世界地球日海报 (1)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="1"><img src="images/brand-promo/1-海报类/1世界地球日海报 (2).jpg" loading="lazy" alt="1世界地球日海报 (2)"><div class="thumb-caption">海报类 · 1世界地球日海报 (2)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="2"><img src="images/brand-promo/1-海报类/1劳动节海报 (1).jpg" loading="lazy" alt="1劳动节海报 (1)"><div class="thumb-caption">海报类 · 1劳动节海报 (1)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="3"><img src="images/brand-promo/1-海报类/1劳动节海报 (2).jpg" loading="lazy" alt="1劳动节海报 (2)"><div class="thumb-caption">海报类 · 1劳动节海报 (2)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="4"><img src="images/brand-promo/1-海报类/1劳动节海报 (3).jpg" loading="lazy" alt="1劳动节海报 (3)"><div class="thumb-caption">海报类 · 1劳动节海报 (3)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="5"><img src="images/brand-promo/1-海报类/1劳动节海报 (4).jpg" loading="lazy" alt="1劳动节海报 (4)"><div class="thumb-caption">海报类 · 1劳动节海报 (4)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="6"><img src="images/brand-promo/1-海报类/1劳动节海报 (5).jpg" loading="lazy" alt="1劳动节海报 (5)"><div class="thumb-caption">海报类 · 1劳动节海报 (5)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="7"><img src="images/brand-promo/1-海报类/元宵节海报.jpg" loading="lazy" alt="元宵节海报"><div class="thumb-caption">海报类 · 元宵节海报</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="8"><img src="images/brand-promo/1-海报类/宰牲节海报.jpg" loading="lazy" alt="宰牲节海报"><div class="thumb-caption">海报类 · 宰牲节海报</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="9"><img src="images/brand-promo/1-海报类/总奖项海报 (1).jpg" loading="lazy" alt="总奖项海报 (1)"><div class="thumb-caption">海报类 · 总奖项海报 (1)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="10"><img src="images/brand-promo/1-海报类/总奖项海报 (2).jpg" loading="lazy" alt="总奖项海报 (2)"><div class="thumb-caption">海报类 · 总奖项海报 (2)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="11"><img src="images/brand-promo/1-海报类/总奖项海报 (3).jpg" loading="lazy" alt="总奖项海报 (3)"><div class="thumb-caption">海报类 · 总奖项海报 (3)</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="12"><img src="images/brand-promo/1-海报类/总奖项海报2.jpg" loading="lazy" alt="总奖项海报2"><div class="thumb-caption">海报类 · 总奖项海报2</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="13"><img src="images/brand-promo/1-海报类/总项目长图.jpg" loading="lazy" alt="总项目长图"><div class="thumb-caption">海报类 · 总项目长图</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="14"><img src="images/brand-promo/1-海报类/清明节海报.jpg" loading="lazy" alt="清明节海报"><div class="thumb-caption">海报类 · 清明节海报</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="15"><img src="images/brand-promo/1-海报类/父亲节海报.jpg" loading="lazy" alt="父亲节海报"><div class="thumb-caption">海报类 · 父亲节海报</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="16"><img src="images/brand-promo/1-海报类/父亲节海报2.jpg" loading="lazy" alt="父亲节海报2"><div class="thumb-caption">海报类 · 父亲节海报2</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="17"><img src="images/brand-promo/1-海报类/端午节海报.jpg" loading="lazy" alt="端午节海报"><div class="thumb-caption">海报类 · 端午节海报</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="18"><img src="images/brand-promo/1-海报类/财神节海报.jpg" loading="lazy" alt="财神节海报"><div class="thumb-caption">海报类 · 财神节海报</div></div>
-      </div>
-      <div class="gallery-sub-label">杂志类 · 5 张</div>
-      <div class="gallery-strip">
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="19"><img src="images/brand-promo/2-杂志类/20260511杂志内页-规格-216x291.jpg" loading="lazy" alt="20260511杂志内页-规格-216x291"><div class="thumb-caption">杂志类 · 20260511杂志内页-规格-216x291</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="20"><img src="images/brand-promo/2-杂志类/三一重能内页216mmx291mm(2)_画板 1.jpg" loading="lazy" alt="三一重能内页216mmx291mm(2) 画板 1"><div class="thumb-caption">杂志类 · 三一重能内页216mmx291mm(2) 画板 1</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="21"><img src="images/brand-promo/2-杂志类/参考设计文件1_画板 1 副本 3.jpg" loading="lazy" alt="参考设计文件1 画板 1 副本 3"><div class="thumb-caption">杂志类 · 参考设计文件1 画板 1 副本 3</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="22"><img src="images/brand-promo/2-杂志类/参考设计文件_画板 1 副本 3.jpg" loading="lazy" alt="参考设计文件 画板 1 副本 3"><div class="thumb-caption">杂志类 · 参考设计文件 画板 1 副本 3</div></div>
-        <div class="gallery-thumb tall" data-gallery="promo" data-index="23"><img src="images/brand-promo/2-杂志类/风电后市场发展报告杂志内页-规格-216x291.jpg" loading="lazy" alt="风电后市场发展报告杂志内页-规格-216x291"><div class="thumb-caption">杂志类 · 风电后市场发展报告杂志内页-规格-216x291</div></div>
-      </div>
-      <div class="gallery-sub-label">公众号类 · 16 张</div>
-      <div class="gallery-strip">
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="24"><img src="images/brand-promo/3-公众号类/20240430公众号banner.png" loading="lazy" alt="20240430公众号banner"><div class="thumb-caption">公众号类 · 20240430公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="25"><img src="images/brand-promo/3-公众号类/20240527公众号banner.png" loading="lazy" alt="20240527公众号banner"><div class="thumb-caption">公众号类 · 20240527公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="26"><img src="images/brand-promo/3-公众号类/20240621公众号banner (2).png" loading="lazy" alt="20240621公众号banner (2)"><div class="thumb-caption">公众号类 · 20240621公众号banner (2)</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="27"><img src="images/brand-promo/3-公众号类/20240623公众号banner.png" loading="lazy" alt="20240623公众号banner"><div class="thumb-caption">公众号类 · 20240623公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="28"><img src="images/brand-promo/3-公众号类/20240628公众号banner.png" loading="lazy" alt="20240628公众号banner"><div class="thumb-caption">公众号类 · 20240628公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="29"><img src="images/brand-promo/3-公众号类/20240704公众号banner.png" loading="lazy" alt="20240704公众号banner"><div class="thumb-caption">公众号类 · 20240704公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="30"><img src="images/brand-promo/3-公众号类/20240813公众号banner.png" loading="lazy" alt="20240813公众号banner"><div class="thumb-caption">公众号类 · 20240813公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="31"><img src="images/brand-promo/3-公众号类/2024082公众号banner.png" loading="lazy" alt="2024082公众号banner"><div class="thumb-caption">公众号类 · 2024082公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="32"><img src="images/brand-promo/3-公众号类/20240903公众号banner.png" loading="lazy" alt="20240903公众号banner"><div class="thumb-caption">公众号类 · 20240903公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="33"><img src="images/brand-promo/3-公众号类/20241008公众号banner.png" loading="lazy" alt="20241008公众号banner"><div class="thumb-caption">公众号类 · 20241008公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="34"><img src="images/brand-promo/3-公众号类/20241010公众号banner.png" loading="lazy" alt="20241010公众号banner"><div class="thumb-caption">公众号类 · 20241010公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="35"><img src="images/brand-promo/3-公众号类/20241017公众号banner.png" loading="lazy" alt="20241017公众号banner"><div class="thumb-caption">公众号类 · 20241017公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="36"><img src="images/brand-promo/3-公众号类/20250114公众号banner.jpg" loading="lazy" alt="20250114公众号banner"><div class="thumb-caption">公众号类 · 20250114公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="37"><img src="images/brand-promo/3-公众号类/20250313公众号banner.png" loading="lazy" alt="20250313公众号banner"><div class="thumb-caption">公众号类 · 20250313公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="38"><img src="images/brand-promo/3-公众号类/20251013公众号banner.png" loading="lazy" alt="20251013公众号banner"><div class="thumb-caption">公众号类 · 20251013公众号banner</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="39"><img src="images/brand-promo/3-公众号类/20251014公众号banner.png" loading="lazy" alt="20251014公众号banner"><div class="thumb-caption">公众号类 · 20251014公众号banner</div></div>
-      </div>
-      <div class="gallery-sub-label">文创类 · 11 张</div>
-      <div class="gallery-strip">
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="40"><img src="images/brand-promo/4-文创类/产品手册.png" loading="lazy" alt="产品手册"><div class="thumb-caption">文创类 · 产品手册</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="41"><img src="images/brand-promo/4-文创类/产品手册1.png" loading="lazy" alt="产品手册1"><div class="thumb-caption">文创类 · 产品手册1</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="42"><img src="images/brand-promo/4-文创类/产品手册2.png" loading="lazy" alt="产品手册2"><div class="thumb-caption">文创类 · 产品手册2</div></div>
+文创类 files (18):
+  产品手册1.png
+  产品手册2.png
+  产品手册.png
+  企业画册.png
+  公仔设计1.jpg
+  公仔设计2.jpg
+  公仔设计3.jpg
+  公仔设计4.jpg
+  包装设计-遵义红2.png
+  包装设计-遵义红3.png
+  包装设计-遵义红.png
+  扑克牌1.jpg
+  扑克牌2.jpg
+  扑克牌3.jpg
+  扑克牌 (1).png
+  扑克牌 (2).png
+  扑克牌 (3).png
+  衣服设计.png
+
+--- HTML snippet (data-index starts at 40) ---
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="40"><img src="images/brand-promo/4-文创类/产品手册1.png" loading="lazy" alt="产品手册1"><div class="thumb-caption">文创类 · 产品手册1</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="41"><img src="images/brand-promo/4-文创类/产品手册2.png" loading="lazy" alt="产品手册2"><div class="thumb-caption">文创类 · 产品手册2</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="42"><img src="images/brand-promo/4-文创类/产品手册.png" loading="lazy" alt="产品手册"><div class="thumb-caption">文创类 · 产品手册</div></div>
         <div class="gallery-thumb wide" data-gallery="promo" data-index="43"><img src="images/brand-promo/4-文创类/企业画册.png" loading="lazy" alt="企业画册"><div class="thumb-caption">文创类 · 企业画册</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="44"><img src="images/brand-promo/4-文创类/包装设计-遵义红.png" loading="lazy" alt="包装设计-遵义红"><div class="thumb-caption">文创类 · 包装设计-遵义红</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="45"><img src="images/brand-promo/4-文创类/包装设计-遵义红2.png" loading="lazy" alt="包装设计-遵义红2"><div class="thumb-caption">文创类 · 包装设计-遵义红2</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="46"><img src="images/brand-promo/4-文创类/包装设计-遵义红3.png" loading="lazy" alt="包装设计-遵义红3"><div class="thumb-caption">文创类 · 包装设计-遵义红3</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="47"><img src="images/brand-promo/4-文创类/扑克牌 (1).png" loading="lazy" alt="扑克牌 (1)"><div class="thumb-caption">文创类 · 扑克牌 (1)</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="48"><img src="images/brand-promo/4-文创类/扑克牌 (2).png" loading="lazy" alt="扑克牌 (2)"><div class="thumb-caption">文创类 · 扑克牌 (2)</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="49"><img src="images/brand-promo/4-文创类/扑克牌 (3).png" loading="lazy" alt="扑克牌 (3)"><div class="thumb-caption">文创类 · 扑克牌 (3)</div></div>
-        <div class="gallery-thumb wide" data-gallery="promo" data-index="50"><img src="images/brand-promo/4-文创类/衣服设计.png" loading="lazy" alt="衣服设计"><div class="thumb-caption">文创类 · 衣服设计</div></div>
-      </div>
-    </div>
+        <div class="gallery-thumb" data-gallery="promo" data-index="44"><img src="images/brand-promo/4-文创类/公仔设计1.jpg" loading="lazy" alt="公仔设计1"><div class="thumb-caption">文创类 · 公仔设计1</div></div>
+        <div class="gallery-thumb" data-gallery="promo" data-index="45"><img src="images/brand-promo/4-文创类/公仔设计2.jpg" loading="lazy" alt="公仔设计2"><div class="thumb-caption">文创类 · 公仔设计2</div></div>
+        <div class="gallery-thumb" data-gallery="promo" data-index="46"><img src="images/brand-promo/4-文创类/公仔设计3.jpg" loading="lazy" alt="公仔设计3"><div class="thumb-caption">文创类 · 公仔设计3</div></div>
+        <div class="gallery-thumb" data-gallery="promo" data-index="47"><img src="images/brand-promo/4-文创类/公仔设计4.jpg" loading="lazy" alt="公仔设计4"><div class="thumb-caption">文创类 · 公仔设计4</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="48"><img src="images/brand-promo/4-文创类/包装设计-遵义红2.png" loading="lazy" alt="包装设计-遵义红2"><div class="thumb-caption">文创类 · 包装设计-遵义红2</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="49"><img src="images/brand-promo/4-文创类/包装设计-遵义红3.png" loading="lazy" alt="包装设计-遵义红3"><div class="thumb-caption">文创类 · 包装设计-遵义红3</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="50"><img src="images/brand-promo/4-文创类/包装设计-遵义红.png" loading="lazy" alt="包装设计-遵义红"><div class="thumb-caption">文创类 · 包装设计-遵义红</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="51"><img src="images/brand-promo/4-文创类/扑克牌1.jpg" loading="lazy" alt="扑克牌1"><div class="thumb-caption">文创类 · 扑克牌1</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="52"><img src="images/brand-promo/4-文创类/扑克牌2.jpg" loading="lazy" alt="扑克牌2"><div class="thumb-caption">文创类 · 扑克牌2</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="53"><img src="images/brand-promo/4-文创类/扑克牌3.jpg" loading="lazy" alt="扑克牌3"><div class="thumb-caption">文创类 · 扑克牌3</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="54"><img src="images/brand-promo/4-文创类/扑克牌 (1).png" loading="lazy" alt="扑克牌 (1)"><div class="thumb-caption">文创类 · 扑克牌 (1)</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="55"><img src="images/brand-promo/4-文创类/扑克牌 (2).png" loading="lazy" alt="扑克牌 (2)"><div class="thumb-caption">文创类 · 扑克牌 (2)</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="56"><img src="images/brand-promo/4-文创类/扑克牌 (3).png" loading="lazy" alt="扑克牌 (3)"><div class="thumb-caption">文创类 · 扑克牌 (3)</div></div>
+        <div class="gallery-thumb wide" data-gallery="promo" data-index="57"><img src="images/brand-promo/4-文创类/衣服设计.png" loading="lazy" alt="衣服设计"><div class="thumb-caption">文创类 · 衣服设计</div></div>
 
-    <!-- ===== 品牌活动视觉 ===== -->
-    <div class="gallery-section reveal reveal-delay-1">
-      <div class="gallery-section-title">
-        <span class="tag events">品牌活动视觉</span>
-        24 张作品
-      </div>
-      <div class="gallery-strip">
-        <div class="gallery-thumb sq" data-gallery="events" data-index="0"><img src="images/brand-events/20220626埃及签约.jpg" loading="lazy" alt="20220626埃及签约"><div class="thumb-caption">品牌活动视觉 · 20220626埃及签约</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="1"><img src="images/brand-events/20230214三一重能东营工厂下线仪式主视觉.png" loading="lazy" alt="20230214三一重能东营工厂下线仪式主视觉"><div class="thumb-caption">品牌活动视觉 · 20230214三一重能东营工厂下线仪式主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="2"><img src="images/brand-events/20230214三一重能东营工厂开工仪式主视觉.png" loading="lazy" alt="20230214三一重能东营工厂开工仪式主视觉"><div class="thumb-caption">品牌活动视觉 · 20230214三一重能东营工厂开工仪式主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="3"><img src="images/brand-events/20230320三一重能韶山数字元平台工厂活动主视觉.jpg" loading="lazy" alt="20230320三一重能韶山数字元平台工厂活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20230320三一重能韶山数字元平台工厂活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="4"><img src="images/brand-events/20230422三一重能塔城工厂开工仪式主视觉.jpg" loading="lazy" alt="20230422三一重能塔城工厂开工仪式主视觉"><div class="thumb-caption">品牌活动视觉 · 20230422三一重能塔城工厂开工仪式主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="5"><img src="images/brand-events/20230620三一重能北大桥活动主视觉.png" loading="lazy" alt="20230620三一重能北大桥活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20230620三一重能北大桥活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="6"><img src="images/brand-events/20230922三一重能协同开发宣讲会主视觉.jpg" loading="lazy" alt="20230922三一重能协同开发宣讲会主视觉"><div class="thumb-caption">品牌活动视觉 · 20230922三一重能协同开发宣讲会主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="7"><img src="images/brand-events/20230926三一重能西南客户活动主视觉.jpg" loading="lazy" alt="20230926三一重能西南客户活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20230926三一重能西南客户活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="8"><img src="images/brand-events/20231014三一哈尔滨通河开工仪式主视觉.jpg" loading="lazy" alt="20231014三一哈尔滨通河开工仪式主视觉"><div class="thumb-caption">品牌活动视觉 · 20231014三一哈尔滨通河开工仪式主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="9"><img src="images/brand-events/20231213三一重能东北区域活动主视觉.jpg" loading="lazy" alt="20231213三一重能东北区域活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20231213三一重能东北区域活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="10"><img src="images/brand-events/20240124年会视觉.jpg" loading="lazy" alt="20240124年会视觉"><div class="thumb-caption">品牌活动视觉 · 20240124年会视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="11"><img src="images/brand-events/20240308中风速风电机组高可靠发展研讨会主视觉.jpg" loading="lazy" alt="20240308中风速风电机组高可靠发展研讨会主视觉"><div class="thumb-caption">品牌活动视觉 · 20240308中风速风电机组高可靠发展研讨会主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="12"><img src="images/brand-events/20240320巴彦淖尔零碳产业园主视觉.jpg" loading="lazy" alt="20240320巴彦淖尔零碳产业园主视觉"><div class="thumb-caption">品牌活动视觉 · 20240320巴彦淖尔零碳产业园主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="13"><img src="images/brand-events/20240428石家庄区域活动主视觉.jpg" loading="lazy" alt="20240428石家庄区域活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20240428石家庄区域活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="14"><img src="images/brand-events/20240602内蒙区域活动主视觉.jpg" loading="lazy" alt="20240602内蒙区域活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20240602内蒙区域活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="15"><img src="images/brand-events/20240721新疆区域活动主视觉.jpg" loading="lazy" alt="20240721新疆区域活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20240721新疆区域活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="16"><img src="images/brand-events/20250205春节年会视觉.jpg" loading="lazy" alt="20250205春节年会视觉"><div class="thumb-caption">品牌活动视觉 · 20250205春节年会视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="17"><img src="images/brand-events/20250429东北区域活动主视觉.jpg" loading="lazy" alt="20250429东北区域活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20250429东北区域活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="18"><img src="images/brand-events/20250526新疆区域活动主视觉.jpg" loading="lazy" alt="20250526新疆区域活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20250526新疆区域活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="19"><img src="images/brand-events/20250716内部会议主视觉.jpg" loading="lazy" alt="20250716内部会议主视觉"><div class="thumb-caption">品牌活动视觉 · 20250716内部会议主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="20"><img src="images/brand-events/20250815巴彦淖尔活动主视觉.jpg" loading="lazy" alt="20250815巴彦淖尔活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20250815巴彦淖尔活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="21"><img src="images/brand-events/20260213年会主视觉.jpg" loading="lazy" alt="20260213年会主视觉"><div class="thumb-caption">品牌活动视觉 · 20260213年会主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="22"><img src="images/brand-events/20260430新疆区域活动主视觉.jpg" loading="lazy" alt="20260430新疆区域活动主视觉"><div class="thumb-caption">品牌活动视觉 · 20260430新疆区域活动主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="events" data-index="23"><img src="images/brand-events/20260626务虚会议主视觉.jpg" loading="lazy" alt="20260626务虚会议主视觉"><div class="thumb-caption">品牌活动视觉 · 20260626务虚会议主视觉</div></div>
-      </div>
-    </div>
-
-    <!-- ===== 展会视觉 ===== -->
-    <div class="gallery-section reveal reveal-delay-1">
-      <div class="gallery-section-title">
-        <span class="tag exhibit">展会视觉</span>
-        33 张作品
-      </div>
-      <div class="gallery-sub-label">2025年风能展 · 价值共生，可靠同行 · 12 张</div>
-      <div class="gallery-strip">
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="0"><img src="images/exhibition/1-2025风能展/1主视觉 (1).jpg" loading="lazy" alt="1主视觉 (1)"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 1主视觉 (1)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="1"><img src="images/exhibition/1-2025风能展/1主视觉 (2).jpg" loading="lazy" alt="1主视觉 (2)"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 1主视觉 (2)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="2"><img src="images/exhibition/1-2025风能展/1主视觉 (3).jpg" loading="lazy" alt="1主视觉 (3)"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 1主视觉 (3)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="3"><img src="images/exhibition/1-2025风能展/1主视觉 (4).jpg" loading="lazy" alt="1主视觉 (4)"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 1主视觉 (4)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="4"><img src="images/exhibition/1-2025风能展/1主视觉 (5).jpg" loading="lazy" alt="1主视觉 (5)"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 1主视觉 (5)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="5"><img src="images/exhibition/1-2025风能展/1主视觉 (6).jpg" loading="lazy" alt="1主视觉 (6)"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 1主视觉 (6)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="6"><img src="images/exhibition/1-2025风能展/2论坛视觉 (1).jpg" loading="lazy" alt="2论坛视觉 (1)"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 2论坛视觉 (1)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="7"><img src="images/exhibition/1-2025风能展/2论坛视觉 (2).jpg" loading="lazy" alt="2论坛视觉 (2)"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 2论坛视觉 (2)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="8"><img src="images/exhibition/1-2025风能展/2论坛视觉 工作人员.jpg" loading="lazy" alt="2论坛视觉 工作人员"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 2论坛视觉 工作人员</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="9"><img src="images/exhibition/1-2025风能展/2论坛视觉 易拉宝.jpg" loading="lazy" alt="2论坛视觉 易拉宝"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 2论坛视觉 易拉宝</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="10"><img src="images/exhibition/1-2025风能展/2论坛视觉 通行证.jpg" loading="lazy" alt="2论坛视觉 通行证"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 2论坛视觉 通行证</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="11"><img src="images/exhibition/1-2025风能展/2论坛视觉 道旗.jpg" loading="lazy" alt="2论坛视觉 道旗"><div class="thumb-caption">2025年风能展 · 价值共生，可靠同行 · 2论坛视觉 道旗</div></div>
-      </div>
-      <div class="gallery-sub-label">2024年风能展 · 全生命周期安全可靠 · 7 张</div>
-      <div class="gallery-strip">
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="12"><img src="images/exhibition/2-2024风能展/2024年风能展论坛主视觉.jpg" loading="lazy" alt="2024年风能展论坛主视觉"><div class="thumb-caption">2024年风能展 · 全生命周期安全可靠 · 2024年风能展论坛主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="13"><img src="images/exhibition/2-2024风能展/2024年风能展论坛旗子.jpg" loading="lazy" alt="2024年风能展论坛旗子"><div class="thumb-caption">2024年风能展 · 全生命周期安全可靠 · 2024年风能展论坛旗子</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="14"><img src="images/exhibition/2-2024风能展/2024年风能展论坛易拉宝.jpg" loading="lazy" alt="2024年风能展论坛易拉宝"><div class="thumb-caption">2024年风能展 · 全生命周期安全可靠 · 2024年风能展论坛易拉宝</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="15"><img src="images/exhibition/2-2024风能展/2024年风能展论坛欢迎牌.jpg" loading="lazy" alt="2024年风能展论坛欢迎牌"><div class="thumb-caption">2024年风能展 · 全生命周期安全可靠 · 2024年风能展论坛欢迎牌</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="16"><img src="images/exhibition/2-2024风能展/2024年风能展论坛欢迎牌2.jpg" loading="lazy" alt="2024年风能展论坛欢迎牌2"><div class="thumb-caption">2024年风能展 · 全生命周期安全可靠 · 2024年风能展论坛欢迎牌2</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="17"><img src="images/exhibition/2-2024风能展/三一重能风能展邀请函长图_01.jpg" loading="lazy" alt="三一重能风能展邀请函长图 01"><div class="thumb-caption">2024年风能展 · 全生命周期安全可靠 · 三一重能风能展邀请函长图 01</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="18"><img src="images/exhibition/2-2024风能展/副屏.jpg" loading="lazy" alt="副屏"><div class="thumb-caption">2024年风能展 · 全生命周期安全可靠 · 副屏</div></div>
-      </div>
-      <div class="gallery-sub-label">2023年风能展 · 十五年 更可靠 · 4 张</div>
-      <div class="gallery-strip">
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="19"><img src="images/exhibition/3-2023风能展/2023风能展主视觉.jpg" loading="lazy" alt="2023风能展主视觉"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2023风能展主视觉</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="20"><img src="images/exhibition/3-2023风能展/2023风能展论坛主视觉 (1).jpg" loading="lazy" alt="2023风能展论坛主视觉 (1)"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2023风能展论坛主视觉 (1)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="21"><img src="images/exhibition/3-2023风能展/2023风能展论坛主视觉 (2).jpg" loading="lazy" alt="2023风能展论坛主视觉 (2)"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2023风能展论坛主视觉 (2)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="22"><img src="images/exhibition/3-2023风能展/2023风能展邀请函.jpg" loading="lazy" alt="2023风能展邀请函"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2023风能展邀请函</div></div>
-      </div>
-      <div class="gallery-sub-label">2022年德国汉堡展 · 10 张</div>
-      <div class="gallery-strip">
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="23"><img src="images/exhibition/4-2022汉堡展/1、倒计时1.jpg" loading="lazy" alt="1、倒计时1"><div class="thumb-caption">2022年德国汉堡展 · 1、倒计时1</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="24"><img src="images/exhibition/4-2022汉堡展/1、倒计时2.jpg" loading="lazy" alt="1、倒计时2"><div class="thumb-caption">2022年德国汉堡展 · 1、倒计时2</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="25"><img src="images/exhibition/4-2022汉堡展/1、倒计时3.jpg" loading="lazy" alt="1、倒计时3"><div class="thumb-caption">2022年德国汉堡展 · 1、倒计时3</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="26"><img src="images/exhibition/4-2022汉堡展/1、倒计时4.jpg" loading="lazy" alt="1、倒计时4"><div class="thumb-caption">2022年德国汉堡展 · 1、倒计时4</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="27"><img src="images/exhibition/4-2022汉堡展/1、倒计时5.jpg" loading="lazy" alt="1、倒计时5"><div class="thumb-caption">2022年德国汉堡展 · 1、倒计时5</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="28"><img src="images/exhibition/4-2022汉堡展/1视觉 (1).jpg" loading="lazy" alt="1视觉 (1)"><div class="thumb-caption">2022年德国汉堡展 · 1视觉 (1)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="29"><img src="images/exhibition/4-2022汉堡展/1视觉 (2).jpg" loading="lazy" alt="1视觉 (2)"><div class="thumb-caption">2022年德国汉堡展 · 1视觉 (2)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="30"><img src="images/exhibition/4-2022汉堡展/2、沙龙 (1).jpg" loading="lazy" alt="2、沙龙 (1)"><div class="thumb-caption">2022年德国汉堡展 · 2、沙龙 (1)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="31"><img src="images/exhibition/4-2022汉堡展/2、沙龙 (2).jpg" loading="lazy" alt="2、沙龙 (2)"><div class="thumb-caption">2022年德国汉堡展 · 2、沙龙 (2)</div></div>
-        <div class="gallery-thumb sq" data-gallery="exhibit" data-index="32"><img src="images/exhibition/4-2022汉堡展/2、沙龙 (3).jpg" loading="lazy" alt="2、沙龙 (3)"><div class="thumb-caption">2022年德国汉堡展 · 2、沙龙 (3)</div></div>
-      </div>
-    </div>
-
-=== HTML END ===
-=== JS START ===
-const galleryData = {
-  "promo": {
-    "title": "品牌宣传视觉",
-    "images": [
-      "images/brand-promo/1-海报类/1世界地球日海报 (1).jpg",
-      "images/brand-promo/1-海报类/1世界地球日海报 (2).jpg",
-      "images/brand-promo/1-海报类/1劳动节海报 (1).jpg",
-      "images/brand-promo/1-海报类/1劳动节海报 (2).jpg",
-      "images/brand-promo/1-海报类/1劳动节海报 (3).jpg",
-      "images/brand-promo/1-海报类/1劳动节海报 (4).jpg",
-      "images/brand-promo/1-海报类/1劳动节海报 (5).jpg",
-      "images/brand-promo/1-海报类/元宵节海报.jpg",
-      "images/brand-promo/1-海报类/宰牲节海报.jpg",
-      "images/brand-promo/1-海报类/总奖项海报 (1).jpg",
-      "images/brand-promo/1-海报类/总奖项海报 (2).jpg",
-      "images/brand-promo/1-海报类/总奖项海报 (3).jpg",
-      "images/brand-promo/1-海报类/总奖项海报2.jpg",
-      "images/brand-promo/1-海报类/总项目长图.jpg",
-      "images/brand-promo/1-海报类/清明节海报.jpg",
-      "images/brand-promo/1-海报类/父亲节海报.jpg",
-      "images/brand-promo/1-海报类/父亲节海报2.jpg",
-      "images/brand-promo/1-海报类/端午节海报.jpg",
-      "images/brand-promo/1-海报类/财神节海报.jpg",
-      "images/brand-promo/2-杂志类/20260511杂志内页-规格-216x291.jpg",
-      "images/brand-promo/2-杂志类/三一重能内页216mmx291mm(2)_画板 1.jpg",
-      "images/brand-promo/2-杂志类/参考设计文件1_画板 1 副本 3.jpg",
-      "images/brand-promo/2-杂志类/参考设计文件_画板 1 副本 3.jpg",
-      "images/brand-promo/2-杂志类/风电后市场发展报告杂志内页-规格-216x291.jpg",
-      "images/brand-promo/3-公众号类/20240430公众号banner.png",
-      "images/brand-promo/3-公众号类/20240527公众号banner.png",
-      "images/brand-promo/3-公众号类/20240621公众号banner (2).png",
-      "images/brand-promo/3-公众号类/20240623公众号banner.png",
-      "images/brand-promo/3-公众号类/20240628公众号banner.png",
-      "images/brand-promo/3-公众号类/20240704公众号banner.png",
-      "images/brand-promo/3-公众号类/20240813公众号banner.png",
-      "images/brand-promo/3-公众号类/2024082公众号banner.png",
-      "images/brand-promo/3-公众号类/20240903公众号banner.png",
-      "images/brand-promo/3-公众号类/20241008公众号banner.png",
-      "images/brand-promo/3-公众号类/20241010公众号banner.png",
-      "images/brand-promo/3-公众号类/20241017公众号banner.png",
-      "images/brand-promo/3-公众号类/20250114公众号banner.jpg",
-      "images/brand-promo/3-公众号类/20250313公众号banner.png",
-      "images/brand-promo/3-公众号类/20251013公众号banner.png",
-      "images/brand-promo/3-公众号类/20251014公众号banner.png",
-      "images/brand-promo/4-文创类/产品手册.png",
+--- JS paths ---
       "images/brand-promo/4-文创类/产品手册1.png",
       "images/brand-promo/4-文创类/产品手册2.png",
+      "images/brand-promo/4-文创类/产品手册.png",
       "images/brand-promo/4-文创类/企业画册.png",
-      "images/brand-promo/4-文创类/包装设计-遵义红.png",
+      "images/brand-promo/4-文创类/公仔设计1.jpg",
+      "images/brand-promo/4-文创类/公仔设计2.jpg",
+      "images/brand-promo/4-文创类/公仔设计3.jpg",
+      "images/brand-promo/4-文创类/公仔设计4.jpg",
       "images/brand-promo/4-文创类/包装设计-遵义红2.png",
       "images/brand-promo/4-文创类/包装设计-遵义红3.png",
+      "images/brand-promo/4-文创类/包装设计-遵义红.png",
+      "images/brand-promo/4-文创类/扑克牌1.jpg",
+      "images/brand-promo/4-文创类/扑克牌2.jpg",
+      "images/brand-promo/4-文创类/扑克牌3.jpg",
       "images/brand-promo/4-文创类/扑克牌 (1).png",
       "images/brand-promo/4-文创类/扑克牌 (2).png",
       "images/brand-promo/4-文创类/扑克牌 (3).png",
-      "images/brand-promo/4-文创类/衣服设计.png"
-    ]
-  },
-  "events": {
-    "title": "品牌活动视觉",
-    "images": [
-      "images/brand-events/20220626埃及签约.jpg",
-      "images/brand-events/20230214三一重能东营工厂下线仪式主视觉.png",
-      "images/brand-events/20230214三一重能东营工厂开工仪式主视觉.png",
-      "images/brand-events/20230320三一重能韶山数字元平台工厂活动主视觉.jpg",
-      "images/brand-events/20230422三一重能塔城工厂开工仪式主视觉.jpg",
-      "images/brand-events/20230620三一重能北大桥活动主视觉.png",
-      "images/brand-events/20230922三一重能协同开发宣讲会主视觉.jpg",
-      "images/brand-events/20230926三一重能西南客户活动主视觉.jpg",
-      "images/brand-events/20231014三一哈尔滨通河开工仪式主视觉.jpg",
-      "images/brand-events/20231213三一重能东北区域活动主视觉.jpg",
-      "images/brand-events/20240124年会视觉.jpg",
-      "images/brand-events/20240308中风速风电机组高可靠发展研讨会主视觉.jpg",
-      "images/brand-events/20240320巴彦淖尔零碳产业园主视觉.jpg",
-      "images/brand-events/20240428石家庄区域活动主视觉.jpg",
-      "images/brand-events/20240602内蒙区域活动主视觉.jpg",
-      "images/brand-events/20240721新疆区域活动主视觉.jpg",
-      "images/brand-events/20250205春节年会视觉.jpg",
-      "images/brand-events/20250429东北区域活动主视觉.jpg",
-      "images/brand-events/20250526新疆区域活动主视觉.jpg",
-      "images/brand-events/20250716内部会议主视觉.jpg",
-      "images/brand-events/20250815巴彦淖尔活动主视觉.jpg",
-      "images/brand-events/20260213年会主视觉.jpg",
-      "images/brand-events/20260430新疆区域活动主视觉.jpg",
-      "images/brand-events/20260626务虚会议主视觉.jpg"
-    ]
-  },
-  "exhibit": {
-    "title": "展会视觉",
-    "images": [
-      "images/exhibition/1-2025风能展/1主视觉 (1).jpg",
-      "images/exhibition/1-2025风能展/1主视觉 (2).jpg",
-      "images/exhibition/1-2025风能展/1主视觉 (3).jpg",
-      "images/exhibition/1-2025风能展/1主视觉 (4).jpg",
-      "images/exhibition/1-2025风能展/1主视觉 (5).jpg",
-      "images/exhibition/1-2025风能展/1主视觉 (6).jpg",
-      "images/exhibition/1-2025风能展/2论坛视觉 (1).jpg",
-      "images/exhibition/1-2025风能展/2论坛视觉 (2).jpg",
-      "images/exhibition/1-2025风能展/2论坛视觉 工作人员.jpg",
-      "images/exhibition/1-2025风能展/2论坛视觉 易拉宝.jpg",
-      "images/exhibition/1-2025风能展/2论坛视觉 通行证.jpg",
-      "images/exhibition/1-2025风能展/2论坛视觉 道旗.jpg",
-      "images/exhibition/2-2024风能展/2024年风能展论坛主视觉.jpg",
-      "images/exhibition/2-2024风能展/2024年风能展论坛旗子.jpg",
-      "images/exhibition/2-2024风能展/2024年风能展论坛易拉宝.jpg",
-      "images/exhibition/2-2024风能展/2024年风能展论坛欢迎牌.jpg",
-      "images/exhibition/2-2024风能展/2024年风能展论坛欢迎牌2.jpg",
-      "images/exhibition/2-2024风能展/三一重能风能展邀请函长图_01.jpg",
-      "images/exhibition/2-2024风能展/副屏.jpg",
+      "images/brand-promo/4-文创类/衣服设计.png",
+
+
+===========================================
+2023风能展 files (12):
+  2、论坛画面1.jpg
+  2、论坛画面2.jpg
+  2、论坛画面3.jpg
+  3、晚宴画面1.jpg
+  3、晚宴画面2.jpg
+  3、晚宴画面3.jpg
+  3、晚宴画面4.jpg
+  3、晚宴画面.jpg
+  2023风能展主视觉.jpg
+  2023风能展论坛主视觉 (1).jpg
+  2023风能展论坛主视觉 (2).jpg
+  2023风能展邀请函.jpg
+
+--- HTML snippet (data-index starts at 19) ---
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="19"><img src="images/exhibition/3-2023风能展/2、论坛画面1.jpg" loading="lazy" alt="2、论坛画面1"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2、论坛画面1</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="20"><img src="images/exhibition/3-2023风能展/2、论坛画面2.jpg" loading="lazy" alt="2、论坛画面2"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2、论坛画面2</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="21"><img src="images/exhibition/3-2023风能展/2、论坛画面3.jpg" loading="lazy" alt="2、论坛画面3"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2、论坛画面3</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="22"><img src="images/exhibition/3-2023风能展/3、晚宴画面1.jpg" loading="lazy" alt="3、晚宴画面1"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 3、晚宴画面1</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="23"><img src="images/exhibition/3-2023风能展/3、晚宴画面2.jpg" loading="lazy" alt="3、晚宴画面2"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 3、晚宴画面2</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="24"><img src="images/exhibition/3-2023风能展/3、晚宴画面3.jpg" loading="lazy" alt="3、晚宴画面3"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 3、晚宴画面3</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="25"><img src="images/exhibition/3-2023风能展/3、晚宴画面4.jpg" loading="lazy" alt="3、晚宴画面4"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 3、晚宴画面4</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="26"><img src="images/exhibition/3-2023风能展/3、晚宴画面.jpg" loading="lazy" alt="3、晚宴画面"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 3、晚宴画面</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="27"><img src="images/exhibition/3-2023风能展/2023风能展主视觉.jpg" loading="lazy" alt="2023风能展主视觉"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2023风能展主视觉</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="28"><img src="images/exhibition/3-2023风能展/2023风能展论坛主视觉 (1).jpg" loading="lazy" alt="2023风能展论坛主视觉 (1)"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2023风能展论坛主视觉 (1)</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="29"><img src="images/exhibition/3-2023风能展/2023风能展论坛主视觉 (2).jpg" loading="lazy" alt="2023风能展论坛主视觉 (2)"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2023风能展论坛主视觉 (2)</div></div>
+        <div class="gallery-thumb" data-gallery="exhibit" data-index="30"><img src="images/exhibition/3-2023风能展/2023风能展邀请函.jpg" loading="lazy" alt="2023风能展邀请函"><div class="thumb-caption">2023年风能展 · 十五年 更可靠 · 2023风能展邀请函</div></div>
+
+--- JS paths ---
+      "images/exhibition/3-2023风能展/2、论坛画面1.jpg",
+      "images/exhibition/3-2023风能展/2、论坛画面2.jpg",
+      "images/exhibition/3-2023风能展/2、论坛画面3.jpg",
+      "images/exhibition/3-2023风能展/3、晚宴画面1.jpg",
+      "images/exhibition/3-2023风能展/3、晚宴画面2.jpg",
+      "images/exhibition/3-2023风能展/3、晚宴画面3.jpg",
+      "images/exhibition/3-2023风能展/3、晚宴画面4.jpg",
+      "images/exhibition/3-2023风能展/3、晚宴画面.jpg",
       "images/exhibition/3-2023风能展/2023风能展主视觉.jpg",
       "images/exhibition/3-2023风能展/2023风能展论坛主视觉 (1).jpg",
       "images/exhibition/3-2023风能展/2023风能展论坛主视觉 (2).jpg",
       "images/exhibition/3-2023风能展/2023风能展邀请函.jpg",
-      "images/exhibition/4-2022汉堡展/1、倒计时1.jpg",
-      "images/exhibition/4-2022汉堡展/1、倒计时2.jpg",
-      "images/exhibition/4-2022汉堡展/1、倒计时3.jpg",
-      "images/exhibition/4-2022汉堡展/1、倒计时4.jpg",
-      "images/exhibition/4-2022汉堡展/1、倒计时5.jpg",
-      "images/exhibition/4-2022汉堡展/1视觉 (1).jpg",
-      "images/exhibition/4-2022汉堡展/1视觉 (2).jpg",
-      "images/exhibition/4-2022汉堡展/2、沙龙 (1).jpg",
-      "images/exhibition/4-2022汉堡展/2、沙龙 (2).jpg",
-      "images/exhibition/4-2022汉堡展/2、沙龙 (3).jpg"
-    ]
-  }
-};
-=== JS END ===
